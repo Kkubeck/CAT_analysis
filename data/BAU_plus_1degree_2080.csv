@@ -1,4 +1,4 @@
-taxon,temperature,climate_rating,mean_annual_ temp_celcius,mean_hottest_month_celcius,mean_coldest_quarter_celsius,mean_annual_precipitation mm/year,mean_driest_quarter mm/qtr,tree,obs_record1,obs_record2,obs_record3,obs_record4,obs_record5
+Taxon,temperature,climate_rating,mean_annual_ temp_celcius,mean_hottest_month_celcius,mean_coldest_quarter_celsius,mean_annual_precipitation mm/year,mean_driest_quarter mm/qtr,tree,obs_record1,obs_record2,obs_record3,obs_record4,obs_record5
 Abeliophyllum distichum,15.3,3,10.7826,26.7,0.224999,1086.5,123.75,FALSE,GBIF_CURRENT=48,MODEL=,PLANTSEARCH=135,,
 Acaena magellanica,15.3,2,6.225,17.6,1.60417,709.75,131,FALSE,GBIF_CURRENT=668,MODEL=,PLANTSEARCH=38,,
 Acaena microphylla,15.3,3,8.56389,21.2,2.23333,1235,239.25,FALSE,GBIF_CURRENT=234,MODEL=,PLANTSEARCH=42,,
