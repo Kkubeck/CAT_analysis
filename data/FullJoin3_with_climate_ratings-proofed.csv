@@ -1,4 +1,4 @@
-﻿AccNoFull.x,ItemAccNoFull,LocationName,LocationCoordY.x,LocationCoordX.x,LifeForm2,Family,Genus.y,GenusSpecies.y,ItemLocationCode.y,ProvenanceCode.y,ItemType,IUCNRedList,NationalRedList,RegionalRedList,Locality,LocalityFull,climate_rating_emissions_limited_2040,climate_rating_current_sheet,climate_rating_business_as_usual_2080,climate_rating_bau_plus_1degree_2080
+﻿AccNoFull,ItemAccNoFull,LocationName,LocationCoordY,LocationCoordX,LifeForm,Family,Genus,GenusSpecies,ItemLocationCode,ProvenanceCode,ItemType,IUCNRedList,NationalRedList,RegionalRedList,Locality,LocalityFull,climate_rating_emissions_limited_2040,climate_rating_current_sheet,climate_rating_business_as_usual_2080,climate_rating_bau_plus_1degree_2080
 1999-0404,1999-0404.01,Contemporary Garden,-123.246025,49.253365,Shrub,Oleaceae,Abeliophyllum,Abeliophyllum distichum,1C01,G,Planting,,,,,,9,11,3,3
 2014-0168,2014-0168.01,Asian Garden,-123.2511504,49.25364154,Shrub,Oleaceae,Abeliophyllum,Abeliophyllum distichum,3AAF,G,Planting,,,,,,9,11,3,3
 1983-0427,1983-0427.01,Alpine Garden,-123.246104,49.25365,Shrub,Pinaceae,Abies,Abies koreana,LAS4,G,Planting,,,,,,6,9,5,5
