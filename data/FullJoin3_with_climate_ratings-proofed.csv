@@ -1,4 +1,4 @@
-﻿AccNoFull,ItemAccNoFull,LocationName,LocationCoordY,LocationCoordX,LifeForm,Family,Genus,GenusSpecies,ItemLocationCode,ProvenanceCode,ItemType,IUCNRedList,NationalRedList,RegionalRedList,Locality,LocalityFull,climate_rating_emissions_limited_2040,climate_rating_current_sheet,climate_rating_business_as_usual_2080,climate_rating_bau_plus_1degree_2080
+AccNoFull,ItemAccNoFull,LocationName,LocationCoordY,LocationCoordX,LifeForm,Family,Genus,GenusSpecies,ItemLocationCode,ProvenanceCode,ItemType,IUCNRedList,NationalRedList,RegionalRedList,Locality,LocalityFull,climate_rating_emissions_limited_2050,climate_rating_current_sheet,climate_rating_business_as_usual_2090,climate_rating_bau_plus_1degree_2090
 1999-0404,1999-0404.01,Contemporary Garden,-123.246025,49.253365,Shrub,Oleaceae,Abeliophyllum,Abeliophyllum distichum,1C01,G,Planting,,,,,,9,11,3,3
 2014-0168,2014-0168.01,Asian Garden,-123.2511504,49.25364154,Shrub,Oleaceae,Abeliophyllum,Abeliophyllum distichum,3AAF,G,Planting,,,,,,9,11,3,3
 1983-0427,1983-0427.01,Alpine Garden,-123.246104,49.25365,Shrub,Pinaceae,Abies,Abies koreana,LAS4,G,Planting,,,,,,6,9,5,5
@@ -234,7 +234,7 @@
 1992-0787,1992-0787.02,Asian Garden,-123.2496112,49.25262248,Shrub,Sapindaceae,Acer,Acer pauciflorum,3AC6,G,Planting,Near threatened,,,,,9,9,9,11
 1993-0469,1993-0469.01,Asian Garden,-123.2480572,49.25083539,Shrub,Sapindaceae,Acer,Acer pauciflorum,3AF7,G,Planting,Near threatened,,,,,9,9,9,11
 1993-0469,1993-0469.02,Asian Garden,-123.2495243,49.25235046,Shrub,Sapindaceae,Acer,Acer pauciflorum,3AC1,G,Planting,Near threatened,,,,,9,9,9,11
-1993-0469,1993-0469.03,Asian Garden,-123.247481,49.250706,Shrub,Sapindaceae,Acer,Acer pauciflorum,3AFA,G,Planting,Near threatened,,,,,9,9,9,11
+1993-0469,1993-0469.03,Asian Garden,-123.247481,49.250706,Shrub,Sapindaceae,Acer,Acer pauciflorum,AFA 3.00,G,Planting,Near threatened,,,,,9,9,9,11
 1999-0293,1999-0293.01,Alpine Garden,-123.246765,49.25398,Shrub,Sapindaceae,Acer,Acer circinatum,LNA5,G,Planting,,,,,,8,11,6,3
 1961-0002,1961-0002.01,Nitobe Memorial Garden,,,Shrub or Tree,Sapindaceae,Acer,Acer palmatum,5A,G,Planting,Least concern,,,,,11,11,11,11
 1972-0765,1972-0765.01,Alpine Garden,-123.246133,49.253477,Shrub or Tree,Sapindaceae,Acer,Acer tataricum,LAS5,G,Planting,,,,,,11,11,8,8
@@ -646,7 +646,7 @@
 1976-0036,1976-0036.01,Alpine Garden,-123.246411,49.253886,Tree,Sapindaceae,Acer,Acer griseum,LAS1,G,Planting,Endangered,,,,,11,9,11,11
 1976-0036,1976-0036.02,Asian Garden,-123.2493486,49.25209381,Tree,Sapindaceae,Acer,Acer griseum,3AD8,G,Planting,Endangered,,,,,11,9,11,11
 1977-0613,1977-0613.01,Alpine Garden,-123.246411,49.253886,Tree,Sapindaceae,Acer,Acer sempervirens,LAS1,G,Planting,Least concern,,,,,9,9,11,11
-1977-0755,1977-0755.01,Asian Garden,-123.247481,49.250706,Tree,Sapindaceae,Acer,Acer triflorum,3AFA,G,Planting,Least concern,,,,,9,11,6,5
+1977-0755,1977-0755.01,Asian Garden,-123.247481,49.250706,Tree,Sapindaceae,Acer,Acer triflorum,AFA 3.00,G,Planting,Least concern,,,,,9,11,6,5
 1978-0030,1978-0030.01,Asian Garden,-123.250355,49.253423,Tree,Sapindaceae,Acer,Acer carpinifolium,3AA5,G,Planting,Least concern,,,,,11,11,8,5
 1978-0031,1978-0031.01,Asian Garden,-123.2480572,49.25083539,Tree,Sapindaceae,Acer,Acer capillipes,3AF7,G,Planting,Least concern,,,,,11,11,6,5
 1978-0032,1978-0032.02,Asian Garden,-123.2478978,49.25110422,Tree,Sapindaceae,Acer,Acer davidii,3AF4,G,Planting,Least concern,,,,,11,9,11,11
@@ -4977,7 +4977,7 @@
 1988-0620,1988-0620.02,Asian Garden,-123.2473536,49.25093897,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,3AJ2,G,Planting,,,,,,6,9,3,3
 1988-0620,1988-0620.03,Asian Garden,-123.247617,49.25079,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,3AFB,G,Planting,,,,,,6,9,3,3
 1988-0620,1988-0620.04,Asian Garden,-123.2472454,49.25081666,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,3AG4,G,Planting,,,,,,6,9,3,3
-1988-0620,1988-0620.05,Asian Garden,-123.247481,49.250706,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,3AFA,G,Planting,,,,,,6,9,3,3
+1988-0620,1988-0620.05,Asian Garden,-123.247481,49.250706,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,AFA 3.00,G,Planting,,,,,,6,9,3,3
 1988-0620,1988-0620.06,Asian Garden,-123.2474426,49.25036623,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula camtschatica,3AWB,G,Planting,,,,,,6,9,3,3
 1996-0666,1996-0666.01,Physic Garden,-123.246647,49.253355,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula ulmaria,1F11,U,Planting,Least concern,,,,,9,9,6,3
 1998-0333,1998-0333.01,Asian Garden,-123.250213,49.253971,Herbaceous Perennial,Rosaceae,Filipendula,Filipendula vestita,3AAA,G,Planting,,,,,,11,11,9,9
@@ -6230,7 +6230,7 @@
 2009-0398,2009-0398.01,Alpine Garden,-123.246602,49.253752,Shrub,Brassicaceae,Iberis,Iberis gibraltarica,LAF1,G,Planting,,,,,,9,9,11,11
 2009-0253,2009-0253.02,Asian Garden,-123.247676,49.25149944,Tree,Salicaceae,Idesia,Idesia polycarpa,3AE9,W,Planting,,,,no specific location provided,JPN: no specific location provided,,,,
 2009-0253,2009-0253.04,Asian Garden,-123.247676,49.25149944,Tree,Salicaceae,Idesia,Idesia polycarpa,3AE9,W,Planting,,,,no specific location provided,JPN: no specific location provided,,,,
-1996-0807,1996-0807.01,Asian Garden,-123.247481,49.250706,Habit unknown,Aquifoliaceae,Ilex,Ilex sp.,3AFA,W,Planting,,,,,"CHN: Yunnan Province, 3350 m",,,,
+1996-0807,1996-0807.01,Asian Garden,-123.247481,49.250706,Habit unknown,Aquifoliaceae,Ilex,Ilex sp.,AFA 3.00,W,Planting,,,,,"CHN: Yunnan Province, 3350 m",,,,
 2000-0468,2000-0468.01,Asian Garden,-123.2482302,49.25242023,Habit unknown,Aquifoliaceae,Ilex,Ilex sp.,3AD1,W,Planting,,,,Kunming,"CHN: Yunnan Province, Kunming, 1950 m",,,,
 2001-0546,2001-0546.01,Asian Garden,-123.2474244,49.2513684,Habit unknown,Aquifoliaceae,Ilex,Ilex sp.,3AF3,W,Planting,,,,Taipingshan to Chil-an,"TWN: Taipingshan to Chil-an, 2100 m",,,,
 2004-0181,2004-0181.01,Asian Garden,-123.2466776,49.25051887,Habit unknown,Aquifoliaceae,Ilex,Ilex sp.,3AJ4,W,Planting,,,,"Dulong Rd., Gongshan, Yunnan","CHN: Yunnan Province, Dulong Rd., Gongshan, Yunnan",,,,
@@ -7129,7 +7129,7 @@
 2013-0098,2013-0098.01,Asian Garden,-123.24649,49.251194,Tree,Lauraceae,Litsea,Litsea cubeba,3AGA,G,Planting,,,,,,9,5,9,9
 2013-0098,2013-0098.02,Asian Garden,-123.2467996,49.25134628,Tree,Lauraceae,Litsea,Litsea cubeba,3AG1,G,Planting,,,,,,9,5,9,9
 2013-0098,2013-0098.03,Asian Garden,-123.2467996,49.25134628,Tree,Lauraceae,Litsea,Litsea cubeba,3AG1,G,Planting,,,,,,9,5,9,9
-2016-0233,2016-0233.01,Asian Garden,-123.247481,49.250706,Tree,Lauraceae,Litsea,Litsea populifolia,3AFA,W,Planting,,,,,,6,5,11,11
+2016-0233,2016-0233.01,Asian Garden,-123.247481,49.250706,Tree,Lauraceae,Litsea,Litsea populifolia,AFA 3.00,W,Planting,,,,,,6,5,11,11
 1989-0529,1989-0529.02,Alpine Garden,-123.246675,49.254371,Herbaceous Perennial,Campanulaceae,Lobelia,Lobelia tupa,LSA2,W,Planting,,,,"coll.Chile(nat.MX,S.","CHL: coll.Chile(nat.MX,S.",11,9,6,6
 2016-0170,2016-0170.01,Front Entrance,-123.250668,49.254134,Herbaceous Perennial,Campanulaceae,Lobelia,Lobelia siphilitica,2A02,G,Planting,,,,,,11,11,6,5
 2018-0651,2018-0651.01,Contemporary Garden,-123.246025,49.253365,Herbaceous Perennial,Campanulaceae,Lobelia,Lobelia × speciosa,1C01,G,Planting,,,,,,,,,
@@ -7319,7 +7319,7 @@
 1980-0032,1980-0032.01,Service Berm,-123.248216,49.254944,Shrub,Magnoliaceae,Magnolia,Magnolia,1X01,G,Planting,,,,,,,,,
 1985-0443,1985-0443.01,Asian Garden,-123.24941,49.25304096,Shrub,Magnoliaceae,Magnolia,Magnolia liliiflora,3AB5,W,Planting,Data deficient,,,"ChangDok S.,AngukDok","KOR: ChangDok S.,AngukDok",11,9,11,11
 2014-0312,2014-0312.01,Front Entrance,-123.251573,49.254125,Shrub,Magnoliaceae,Magnolia,Magnolia stellata,2A18,G,Planting,Endangered,,,,,11,11,11,11
-1981-0063,1981-0063.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Magnoliaceae,Magnolia,Magnolia sieboldii,3AFA,W,Planting,,,,Nara Prefecture,JPN: Nara Prefecture,11,11,8,8
+1981-0063,1981-0063.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Magnoliaceae,Magnolia,Magnolia sieboldii,AFA 3.00,W,Planting,,,,Nara Prefecture,JPN: Nara Prefecture,11,11,8,8
 1982-0929,1982-0929.02,Asian Garden,-123.2487469,49.25216056,Shrub or Tree,Magnoliaceae,Magnolia,Magnolia sieboldii,3AD6,G,Planting,,,,,,11,11,8,8
 2007-0138,2007-0138.01,Carolinean Forest,-123.248129,49.254107,Shrub or Tree,Magnoliaceae,Magnolia,Magnolia virginiana,4C06,G,Planting,Least concern,,,,,9,9,11,11
 2012-0179,2012-0179.01,Asian Garden,-123.250355,49.253423,Shrub or Tree,Magnoliaceae,Magnolia,Magnolia laevifolia,3AA5,G,Planting,Data deficient,,,,,9,9,9,11
@@ -7346,7 +7346,7 @@
 1978-0362,1978-0362.01,Asian Garden,-123.2498194,49.25305292,Tree,Magnoliaceae,Magnolia,Magnolia dawsoniana,3AB4,G,Planting,,,,,,11,9,11,11
 1979-0244,1979-0244.01,Asian Garden,-123.2474407,49.25156143,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AE7,G,Planting,Least concern,,,,,11,11,11,8
 1979-0245,1979-0245.01,Asian Garden,-123.2480625,49.25156118,Tree,Magnoliaceae,Magnolia,Magnolia dawsoniana,3AEB,G,Planting,,,,,,11,9,11,11
-1979-0247,1979-0247.01,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia wilsonii,3AFA,W,Planting,Near threatened,,,,CHN:,8,9,11,11
+1979-0247,1979-0247.01,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia wilsonii,AFA 3.00,W,Planting,Near threatened,,,,CHN:,8,9,11,11
 1980-0041,1980-0041.01,Asian Garden,-123.249571,49.252027,Tree,Magnoliaceae,Magnolia,Magnolia sprengeri,3ADB,G,Planting,Least concern,,,,,11,9,11,11
 1980-0158,1980-0158.01,Service Berm,-123.248216,49.254944,Tree,Magnoliaceae,Magnolia,Magnolia acuminata × M. sprengeri,1X01,G,Planting,,,,,,,,,
 1980-0425,1980-0425.02,Asian Garden,-123.2484641,49.2517186,Tree,Magnoliaceae,Magnolia,Magnolia sprengeri,3AE5,G,Planting,,,,,,11,9,11,11
@@ -7358,7 +7358,7 @@
 1982-0939,1982-0939.06,Asian Garden,-123.2489285,49.25139453,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AH3,G,Planting,Least concern,,,,,11,11,11,8
 1982-0940,1982-0940.02,Asian Garden,-123.2487469,49.25216056,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AD6,G,Planting,Least concern,,,,,11,11,11,8
 1982-0942,1982-0942.04,Asian Garden,-123.2516494,49.25369778,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AW1,G,Planting,Least concern,,,,,11,11,11,8
-1982-0943,1982-0943.01,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AFA,G,Planting,,,,,,11,11,11,8
+1982-0943,1982-0943.01,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,AFA 3.00,G,Planting,,,,,,11,11,11,8
 1982-0944,1982-0944.01,Asian Garden,-123.2501193,49.2532481,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AB3,G,Planting,Least concern,,,,,11,11,11,8
 1982-0944,1982-0944.03,Asian Garden,-123.2512108,49.25325909,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AW2,G,Planting,Least concern,,,,,11,11,11,8
 1982-0945,1982-0945.02,Asian Garden,-123.2512108,49.25325909,Tree,Magnoliaceae,Magnolia,Magnolia campbellii,3AW2,G,Planting,Least concern,,,,,11,11,11,8
@@ -7439,7 +7439,7 @@
 2001-0388,2001-0388.01,Asian Garden,-123.248971,49.25130734,Tree,Magnoliaceae,Magnolia,Magnolia sprengeri,3AW8,G,Planting,,,,,,11,9,11,11
 2002-0460,2002-0460.01,Asian Garden,-123.2500403,49.25290045,Tree,Magnoliaceae,Magnolia,Magnolia maudiae,3AB7,W,Planting,Least concern,,,Shen Tan Shan Resort (Da Yao Shan),"CHN: Guangxi Autonomous Region, Shen Tan Shan Resort (Da Yao Shan), 1190 m, 23 56' 49""N | 110 06""E",9,6,9,9
 2002-0460,2002-0460.02,Asian Garden,-123.24649,49.251194,Tree,Magnoliaceae,Magnolia,Magnolia maudiae,3AGA,W,Planting,Least concern,,,Shen Tan Shan Resort (Da Yao Shan),"CHN: Guangxi Autonomous Region, Shen Tan Shan Resort (Da Yao Shan), 1190 m, 23 56' 49""N | 110 06""E",9,6,9,9
-2002-0460,2002-0460.03,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia maudiae,3AFA,W,Planting,Least concern,,,Shen Tan Shan Resort (Da Yao Shan),"CHN: Guangxi Autonomous Region, Shen Tan Shan Resort (Da Yao Shan), 1190 m, 23 56' 49""N | 110 06""E",9,6,9,9
+2002-0460,2002-0460.03,Asian Garden,-123.247481,49.250706,Tree,Magnoliaceae,Magnolia,Magnolia maudiae,AFA 3.00,W,Planting,Least concern,,,Shen Tan Shan Resort (Da Yao Shan),"CHN: Guangxi Autonomous Region, Shen Tan Shan Resort (Da Yao Shan), 1190 m, 23 56' 49""N | 110 06""E",9,6,9,9
 2004-0184,2004-0184.01,Asian Garden,-123.2465302,49.2506617,Tree,Magnoliaceae,Magnolia,Magnolia nitida,3AJ3,G,Planting,Vulnerable,,,,,11,9,11,11
 2004-0184,2004-0184.03,Asian Garden,-123.246993,49.250359,Tree,Magnoliaceae,Magnolia,Magnolia nitida,3AG9,G,Planting,Vulnerable,,,,,11,9,11,11
 2004-0184,2004-0184.04,Asian Garden,-123.2466776,49.25051887,Tree,Magnoliaceae,Magnolia,Magnolia nitida,3AJ4,G,Planting,Vulnerable,,,,,11,9,11,11
@@ -7738,7 +7738,7 @@
 1978-0511,1978-0511.08,Asian Garden,-123.251419,49.25368067,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AAH,G,Planting,Endangered,,,,,11,9,11,11
 1978-0511,1978-0511.09,Asian Garden,-123.251419,49.25368067,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AAH,G,Planting,Endangered,,,,,11,9,11,11
 1978-0511,1978-0511.10,Asian Garden,-123.251419,49.25368067,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AAH,G,Planting,Endangered,,,,,11,9,11,11
-1980-0346,1980-0346.01,Asian Garden,-123.247481,49.250706,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AFA,G,Planting,Endangered,,,,,11,9,11,11
+1980-0346,1980-0346.01,Asian Garden,-123.247481,49.250706,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,AFA 3.00,G,Planting,Endangered,,,,,11,9,11,11
 1981-0098,1981-0098.01,Asian Garden,-123.2474836,49.25210664,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AS3,W,Planting,Endangered,,,Peking (?wild),CHN: Peking (?wild),11,9,11,11
 1981-0098,1981-0098.02,Asian Garden,-123.2470814,49.25178773,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AS4,W,Planting,Endangered,,,Peking (?wild),CHN: Peking (?wild),11,9,11,11
 1981-0098,1981-0098.03,Asian Garden,-123.2481428,49.25261591,Tree,Cupressaceae,Metasequoia,Metasequoia glyptostroboides,3AS2,W,Planting,Endangered,,,Peking (?wild),CHN: Peking (?wild),11,9,11,11
@@ -10469,9 +10469,9 @@
 1988-0053,1988-0053.01,Asian Garden,-123.2479935,49.25203532,Shrub,Ericaceae,Rhododendron,Rhododendron schlippenbachii,3AE1,G,Planting,,,,,,8,11,5,5
 1988-0056,1988-0056.01,Asian Garden,-123.2485506,49.25273738,Shrub,Ericaceae,Rhododendron,Rhododendron hemsleyanum,3ABC,G,Planting,,,,,,11,11,11,11
 1988-0057,1988-0057.01,Asian Garden,-123.2479955,49.25177101,Shrub,Ericaceae,Rhododendron,Rhododendron fulvum,3AE4,G,Planting,,,,,,11,11,11,8
-1988-0064,1988-0064.01,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,3AFA,G,Planting,,,,,,6,9,11,11
-1988-0064,1988-0064.02,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,3AFA,G,Planting,,,,,,6,9,11,11
-1988-0064,1988-0064.03,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,3AFA,G,Planting,,,,,,6,9,11,11
+1988-0064,1988-0064.01,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,AFA 3.00,G,Planting,,,,,,6,9,11,11
+1988-0064,1988-0064.02,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,AFA 3.00,G,Planting,,,,,,6,9,11,11
+1988-0064,1988-0064.03,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron adenopodum,AFA 3.00,G,Planting,,,,,,6,9,11,11
 1988-0304,1988-0304.01,Asian Garden,-123.2478291,49.25185197,Shrub,Ericaceae,Rhododendron,Rhododendron japonicum,3AE3,W,Planting,,,,"Kotakucorra,Nikko","JPN: Kotakucorra,Nikko",9,11,6,6
 1988-0304,1988-0304.02,Asian Garden,-123.2475103,49.25182538,Shrub,Ericaceae,Rhododendron,Rhododendron japonicum,3AF1,W,Planting,,,,"Kotakucorra,Nikko","JPN: Kotakucorra,Nikko",9,11,6,6
 1988-0304,1988-0304.04,Asian Garden,-123.2478291,49.25185197,Shrub,Ericaceae,Rhododendron,Rhododendron japonicum,3AE3,W,Planting,,,,"Kotakucorra,Nikko","JPN: Kotakucorra,Nikko",9,11,6,6
@@ -10662,7 +10662,7 @@
 1995-0824,1995-0824.07,Asian Garden,-123.247394,49.25053,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AF8,U,Planting,,,,,,6,9,3,3
 1995-0824,1995-0824.08,Asian Garden,-123.247394,49.25053,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AF8,U,Planting,,,,,,6,9,3,3
 1995-0824,1995-0824.09,Asian Garden,-123.247394,49.25053,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AF8,U,Planting,,,,,,6,9,3,3
-1995-0824,1995-0824.10,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AFA,U,Planting,,,,,,6,9,3,3
+1995-0824,1995-0824.10,Asian Garden,-123.247481,49.250706,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,AFA 3.00,U,Planting,,,,,,6,9,3,3
 1995-0824,1995-0824.12,Asian Garden,-123.247394,49.25053,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AF8,U,Planting,,,,,,6,9,3,3
 1995-0824,1995-0824.13,Asian Garden,-123.247394,49.25053,Shrub,Ericaceae,Rhododendron,Rhododendron brachycarpum,3AF8,U,Planting,,,,,,6,9,3,3
 1995-0829,1995-0829.01,Asian Garden,-123.2489599,49.25178564,Shrub,Ericaceae,Rhododendron,Rhododendron auriculatum,3AE6,W,Planting,,,,"Daozhen county, Dashahe Cathaya Reserve, northern part of Gie Bei trail on Guizhou/Sichuan border. Top of pass.","CHN: Guizhou Province, Daozhen county, Dashahe Cathaya Reserve, northern part of Gie Bei trail on Guizhou/Sichuan border. Top of pass., 1500 m",8,9,11,11
@@ -11511,9 +11511,9 @@
 1980-0155,1980-0155.01,Asian Garden,-123.2474407,49.25156143,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron rex,3AE7,G,Planting,,,,,,11,11,11,11
 1981-0043,1981-0043.01,Asian Garden,-123.2474244,49.2513684,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron arizelum,3AF3,G,Planting,,,,,,11,11,11,5
 1982-0194,1982-0194.01,Asian Garden,-123.2484928,49.25108269,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron calophytum,3AH5,U,Planting,,,,,,11,9,11,11
-1982-0972,1982-0972.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,3AFA,G,Planting,,,,,,6,9,5,5
-1982-0972,1982-0972.02,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,3AFA,G,Planting,,,,,,6,9,5,5
-1982-0972,1982-0972.03,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,3AFA,G,Planting,,,,,,6,9,5,5
+1982-0972,1982-0972.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,AFA 3.00,G,Planting,,,,,,6,9,5,5
+1982-0972,1982-0972.02,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,AFA 3.00,G,Planting,,,,,,6,9,5,5
+1982-0972,1982-0972.03,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,AFA 3.00,G,Planting,,,,,,6,9,5,5
 1982-0986,1982-0986.01,Asian Garden,-123.250583,49.253088,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sutchuenense,3AB8,G,Planting,,,,,,11,9,11,11
 1982-0989,1982-0989.01,Asian Garden,-123.2499776,49.25365216,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron argyrophyllum,3AA4,G,Planting,,,,,,8,9,11,11
 1982-1030,1982-1030.01,Asian Garden,-123.2481083,49.25130233,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron degronianum,3AH1,G,Planting,,,,,,6,9,5,5
@@ -11764,7 +11764,7 @@
 2000-0594,2000-0594.04,Asian Garden,-123.250744,49.253437,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AAL,W,Planting,,,,Cutover trail from Chiloan to Taipingshan,"TWN: Cutover trail from Chiloan to Taipingshan, 2200 m",11,11,11,8
 2000-0594,2000-0594.05,Asian Garden,-123.250744,49.253437,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AAL,W,Planting,,,,Cutover trail from Chiloan to Taipingshan,"TWN: Cutover trail from Chiloan to Taipingshan, 2200 m",11,11,11,8
 2000-0595,2000-0595.01,Asian Garden,-123.247394,49.25053,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AF8,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
-2000-0595,2000-0595.02,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AFA,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
+2000-0595,2000-0595.02,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,AFA 3.00,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
 2000-0595,2000-0595.03,Asian Garden,-123.247394,49.25053,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AF8,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
 2000-0595,2000-0595.04,Asian Garden,-123.247394,49.25053,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AF8,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
 2000-0595,2000-0595.06,Asian Garden,-123.247394,49.25053,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron morii,3AF8,W,Planting,,,,"Along road from hotel, Taipingshan","TWN: Along road from hotel, Taipingshan",11,11,11,8
@@ -11952,8 +11952,8 @@
 2009-0220,2009-0220.08,Asian Garden,-123.2452198,49.24979277,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,3AM5,W,Planting,,,,Sa Pa,"VNM: Lao Cai, Sa Pa, 2323 m",,,,
 2009-0220,2009-0220.09,Asian Garden,-123.245489,49.249938,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,3AL2,W,Planting,,,,Sa Pa,"VNM: Lao Cai, Sa Pa, 2323 m",,,,
 2009-0220,2009-0220.10,Asian Garden,-123.245489,49.249938,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,3AL2,W,Planting,,,,Sa Pa,"VNM: Lao Cai, Sa Pa, 2323 m",,,,
-2009-0368,2009-0368.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron hyperythrum,3AFA,U,Planting,,,,,,11,11,8,8
-2009-0369,2009-0369.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,3AFA,U,Planting,,,,,,,,,
+2009-0368,2009-0368.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron hyperythrum,AFA 3.00,U,Planting,,,,,,11,11,8,8
+2009-0369,2009-0369.01,Asian Garden,-123.247481,49.250706,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,AFA 3.00,U,Planting,,,,,,,,,
 2010-0068,2010-0068.01,Asian Garden,-123.247819,49.25083997,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron campanulatum,3AF6,U,Planting,,,,,,8,9,8,5
 2010-0068,2010-0068.02,Asian Garden,-123.247819,49.25083997,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron campanulatum,3AF6,U,Planting,,,,,,8,9,8,5
 2010-0069,2010-0069.01,Asian Garden,-123.2480572,49.25083539,Shrub or Tree,Ericaceae,Rhododendron,Rhododendron sp.,3AF7,U,Planting,,,,,,,,,
@@ -13398,7 +13398,7 @@
 1994-0008,1994-0008.01,Alpine Garden,-123.246104,49.25365,Shrub,Rosaceae,Sorbus,Sorbus poteriifolia,LAS4,G,Planting,,,,,,8,9,5,5
 1998-0538,1998-0538.01,Alpine Garden,-123.246133,49.253477,Shrub,Rosaceae,Sorbus,Sorbus gracilis,LAS5,G,Planting,,,,,,11,11,8,5
 1999-0380,1999-0380.01,Alpine Garden,-123.246104,49.25365,Shrub,Rosaceae,Sorbus,Sorbus koehneana,LAS4,G,Planting,,,,,,11,11,11,8
-2009-0379,2009-0379.01,Asian Garden,-123.247481,49.250706,Shrub,Rosaceae,Sorbus,Sorbus commixta,3AFA,U,Planting,,,,,,8,11,5,5
+2009-0379,2009-0379.01,Asian Garden,-123.247481,49.250706,Shrub,Rosaceae,Sorbus,Sorbus commixta,AFA 3.00,U,Planting,,,,,,8,11,5,5
 2012-0250,2012-0250.02,Alpine Garden,-123.24615,49.253795,Shrub,Rosaceae,Sorbus,Sorbus commixta,LAS6,W,Planting,,,,"Nagand Prefecture, Iida Town","JPN: Nagand Prefecture, Iida Town, 1907 m, 35.416667 | 138.016667",8,11,5,5
 1976-0300,1976-0300.01,Rain Forest Garden,,,Shrub or Tree,Rosaceae,Sorbus,Sorbus sitchensis,1B19,W,Planting,,,Yellow-listed British Columbia,"Fernie, Flathead Rd., along both sides of road from Highway 3 to Corbin and south to big bend 4 miles south of Corbin","CAN: British Columbia, East Kootenay Regional District, Fernie, Flathead Rd., along both sides of road from Highway 3 to Corbin and south to big bend 4 miles south of Corbin, 488 m, 49 40 | -114 49",3,9,2,2
 1976-0300,1976-0300.02,Dwarf Pinetum,-123.245496,49.253423,Shrub or Tree,Rosaceae,Sorbus,Sorbus sitchensis,1DP2,W,Planting,,,Yellow-listed British Columbia,"Fernie, Flathead Rd., along both sides of road from Highway 3 to Corbin and south to big bend 4 miles south of Corbin","CAN: British Columbia, East Kootenay Regional District, Fernie, Flathead Rd., along both sides of road from Highway 3 to Corbin and south to big bend 4 miles south of Corbin, 488 m, 49 40 | -114 49",3,9,2,2
@@ -14660,7 +14660,7 @@
 2016-0420,2016-0420.50,Asian Garden,-123.247819,49.25083997,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AF6,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
 2016-0420,2016-0420.51,Asian Garden,-123.2480572,49.25083539,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AF7,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
 2016-0420,2016-0420.52,Asian Garden,-123.247394,49.25053,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AF8,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
-2016-0420,2016-0420.53,Asian Garden,-123.247481,49.250706,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AFA,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
+2016-0420,2016-0420.53,Asian Garden,-123.247481,49.250706,Tree,Pinaceae,Tsuga,Tsuga heterophylla,AFA 3.00,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
 2016-0420,2016-0420.54,Asian Garden,-123.2482625,49.25110089,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AH7,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
 2016-0420,2016-0420.55,Asian Garden,-123.2482625,49.25110089,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AH7,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
 2016-0420,2016-0420.56,Asian Garden,-123.2482625,49.25110089,Tree,Pinaceae,Tsuga,Tsuga heterophylla,3AH7,W,Flora (On-Site Origin),Least concern,,Yellow-listed British Columbia,,,8,11,6,3
@@ -15849,7 +15849,7 @@
 1978-0374,1978-0374.01,Asian Garden,-123.2489599,49.25178564,Shrub,Viburnaceae,Viburnum,Viburnum plicatum,3AE6,U,Planting,,,,,,11,11,8,8
 1978-0374,1978-0374.02,Asian Garden,-123.2489599,49.25178564,Shrub,Viburnaceae,Viburnum,Viburnum plicatum,3AE6,U,Planting,,,,,,11,11,8,8
 1980-0430,1980-0430.01,Asian Garden,-123.2485506,49.25273738,Shrub,Viburnaceae,Viburnum,Viburnum plicatum,3ABC,G,Planting,,,,,,11,11,8,8
-1980-0462,1980-0462.01,Asian Garden,-123.247481,49.250706,Shrub,Viburnaceae,Viburnum,Viburnum sieboldii,3AFA,W,Planting,,,,Kyoto Bot.Gdn.,JPN: Kyoto Bot.Gdn.,11,9,8,5
+1980-0462,1980-0462.01,Asian Garden,-123.247481,49.250706,Shrub,Viburnaceae,Viburnum,Viburnum sieboldii,AFA 3.00,W,Planting,,,,Kyoto Bot.Gdn.,JPN: Kyoto Bot.Gdn.,11,9,8,5
 1981-0034,1981-0034.01,Alpine Garden,-123.246104,49.25365,Shrub,Viburnaceae,Viburnum,Viburnum farreri,LAS4,G,Planting,,,,,,8,11,5,5
 1981-0034,1981-0034.02,Asian Garden,-123.2490676,49.25204371,Shrub,Viburnaceae,Viburnum,Viburnum farreri,3ADA,G,Planting,,,,,,8,11,5,5
 1981-0034,1981-0034.04,Asian Garden,-123.248709,49.25159409,Shrub,Viburnaceae,Viburnum,Viburnum farreri,3AH8,G,Planting,,,,,,8,11,5,5
