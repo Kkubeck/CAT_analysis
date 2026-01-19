@@ -144,8 +144,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Exploratory Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notebooks/k-cluster_analysis-final.ipynb"> 
-<span class="menu-text">Cluster Strategy</span></a>
+    <a class="nav-link" href="../notebooks/CAT_climate_suitability_rating_interactive_map.html"> 
+<span class="menu-text">Suitability Ratings map</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -205,9 +205,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="section-2-data-wrangling" class="level3">
 <h3 class="anchored" data-anchor-id="section-2-data-wrangling">Section 2: Data wrangling</h3>
-<div id="ebe718ad-074a-49da-b774-85b4dab29df3" class="cell" data-execution_count="2">
+<div id="ebe718ad-074a-49da-b774-85b4dab29df3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Load the comprehensive proofed dataset from the 'data' folder</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Rename columns to match the specific names required by the Altair widget</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>rename_dict <span class="op">=</span> {</span>

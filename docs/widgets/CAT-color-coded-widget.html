@@ -145,8 +145,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Exploratory Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notebooks/k-cluster_analysis-final.ipynb"> 
-<span class="menu-text">Cluster Strategy</span></a>
+    <a class="nav-link" href="../notebooks/CAT_climate_suitability_rating_interactive_map.html"> 
+<span class="menu-text">Suitability Ratings map</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -177,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>alt.data_transformers.enable(<span class="st">'vegafusion'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the file</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>cat_df <span class="op">=</span> pd.read_csv(<span class="st">'data/CAT-current-UBCBG.csv'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>cat_df <span class="op">=</span> pd.read_csv(<span class="st">'../data/CAT-current-UBCBG.csv'</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename relevant columns</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>cat_df <span class="op">=</span> cat_df.rename(columns<span class="op">=</span>{</span>
@@ -224,12 +224,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>garden_df[<span class="st">'LifeFormGroup'</span>] <span class="op">=</span> garden_df[<span class="st">'LifeForm'</span>].<span class="bu">apply</span>(map_lifeform)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d872f5cd-5305-4aa3-8821-8d7d01c1df0e" class="cell" data-execution_count="4">
+<div id="d872f5cd-5305-4aa3-8821-8d7d01c1df0e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Load the comprehensive proofed dataset</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Rename columns to match the specific names required by your Altair widget</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>rename_dict <span class="op">=</span> {</span>
@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4           Abies balsamea    Woody  Current            9.0  </code></pre>
 </div>
 </div>
-<div id="8ce51c27-beab-45d4-9e48-26e278b71fb6" class="cell" data-execution_count="5">
+<div id="8ce51c27-beab-45d4-9e48-26e278b71fb6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup dropdown options</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>era_order <span class="op">=</span> [<span class="st">'Current'</span>, <span class="st">'2050'</span>, <span class="st">'2090'</span>, <span class="st">'2090_plus_1deg'</span>]</span>
@@ -334,34 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> widgets.Output()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[5]</span><span class="ansi-green-fg">, line 6</span>
-<span class="ansi-green-fg">      3</span> era_order = [<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Current</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">2050</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">2090</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">2090_plus_1deg</span><span class="ansi-yellow-fg">'</span>]
-<span class="ansi-green-fg">      4</span> lifeform_options = [<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">(All)</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Trees</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Perennials</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Annuals</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Bulbs</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Woody</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Herbaceous</span><span class="ansi-yellow-fg">'</span>, <span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Other</span><span class="ansi-yellow-fg">'</span>]
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">6</span> era_widget = <span class="ansi-yellow-bg">widgets</span>.Dropdown(
-<span class="ansi-green-fg">      7</span>     options=era_order,
-<span class="ansi-green-fg">      8</span>     value=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Current</span><span class="ansi-yellow-fg">'</span>,
-<span class="ansi-green-fg">      9</span>     description=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Era:</span><span class="ansi-yellow-fg">'</span>
-<span class="ansi-green-fg">     10</span> )
-<span class="ansi-green-fg">     12</span> lifeform_widget = widgets.Dropdown(
-<span class="ansi-green-fg">     13</span>     options=lifeform_options,
-<span class="ansi-green-fg">     14</span>     value=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">(All)</span><span class="ansi-yellow-fg">'</span>,
-<span class="ansi-green-fg">     15</span>     description=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">LifeForm:</span><span class="ansi-yellow-fg">'</span>
-<span class="ansi-green-fg">     16</span> )
-<span class="ansi-green-fg">     18</span> provenance_widget = widgets.Dropdown(
-<span class="ansi-green-fg">     19</span>     options=[<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">(All)</span><span class="ansi-yellow-fg">'</span>] + <span style="color:rgb(0,135,0)">sorted</span>(garden_df[<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">ProvenanceGroup</span><span class="ansi-yellow-fg">'</span>].dropna().unique()),
-<span class="ansi-green-fg">     20</span>     value=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">(All)</span><span class="ansi-yellow-fg">'</span>,
-<span class="ansi-green-fg">     21</span>     description=<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">Provenance:</span><span class="ansi-yellow-fg">'</span>
-<span class="ansi-green-fg">     22</span> )
-
-<span class="ansi-red-fg">NameError</span>: name 'widgets' is not defined</pre>
 </div>
-</div>
-</div>
-<div id="39aeebf7-a471-4c75-a13c-b2c4f5cc78ff" class="cell" data-execution_count="3">
+<div id="39aeebf7-a471-4c75-a13c-b2c4f5cc78ff" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set final Garden plot boundaries</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>manual_long_min <span class="op">=</span> <span class="op">-</span><span class="fl">123.2525</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>manual_long_max <span class="op">=</span> <span class="op">-</span><span class="fl">123.2402</span></span>
@@ -415,16 +389,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>update_plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"c5e44aa4c34545fb8a1aeebcab5abe9a","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"9bcf9d2297634c5e84a0d050ac5508f6","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
-<div id="15b6806a-f64f-4292-a8cc-ebcd9945db54" class="cell" data-execution_count="2">
+<div id="15b6806a-f64f-4292-a8cc-ebcd9945db54" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Load the comprehensive proofed dataset</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Rename columns to match the specific names required by your Altair widget</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>rename_dict <span class="op">=</span> {</span>
