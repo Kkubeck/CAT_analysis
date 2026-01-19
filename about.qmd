@@ -1,0 +1,21 @@
+---
+title: "About the Project"
+---
+
+## The Methodology
+
+This analysis integrates data from three primary sources:
+1.  **IrisBG:** The living collection database of the UBC Botanical Garden.
+2.  **ClimateNA:** Historical and projected climate data for the Point Grey campus.
+3.  **Global Occurrence Data:** Synthesized ranges for over 13,000 taxa.
+
+## Technical Stack
+
+This project uses a modern open-source stack to ensure reproducibility:
+* **Python:** Data cleaning and statistical analysis (Pandas, Scikit-Learn).
+* **Plotly & Altair:** Interactive visualization and mapping.
+* **Quarto:** Technical publishing and website generation.
+
+## Contact
+
+**Kevin Kubeck** *Nursery Horticulturist* UBC Botanical Garden

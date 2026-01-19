@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "UBCBG Climate Analysis"
+  navbar:
+    background: "#002145"
+    left:
+      - href: index.qmd
+        text: Home
+      # NOTICE: The "notebooks/" prefix is required here
+      - href: notebooks/2025_taxonomy_backbone_EDA.ipynb
+        text: "Taxonomy Backbone"
+      - href: notebooks/data_validation.ipynb
+        text: "Data Validation"
+      - href: notebooks/Joined_EDA.ipynb
+        text: "Exploratory Analysis"
+      - href: notebooks/k-cluster_analysis-final.ipynb
+        text: "Cluster Strategy"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
