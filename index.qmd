@@ -1,0 +1,42 @@
+---
+title: "UBC Botanical Garden Climate Adaptation Analysis"
+subtitle: "Data-driven strategies for the 2050 and 2090 climate scenarios"
+---
+
+# Project Overview
+
+The **Climate Adaptation Tool (CAT)** analysis provides a comprehensive assessment of the UBC Botanical Garden's collection against projected climate shifts. By integrating historical records with localized climate modeling, this project identifies risks, opportunities, and strategic priorities for curatorial management.
+
+
+
+## Key Findings
+
+Our analysis covers **82.2%** of the documented collection, revealing distinct trends in survivability:
+
+* **The 2050 Tipping Point:** While many woody taxa remain resilient through 2050, herbaceous perennials show earlier signs of stress.
+* **Spatial Vulnerability:** Risk is not evenly distributed. The **Asian Garden** and **Alpine** sections face higher cumulative stress than the Carolinian Forest.
+* **Strategic Clusters:** We have segmented the collection into four management groups: *Resilient*, *Moderate*, *Vulnerable*, and *Highly Vulnerable*.
+
+## Explore the Data
+
+::: {.grid}
+
+::: {.g-col-4}
+### 📊 Trends
+[**Exploratory Analysis**](notebooks/Joined_EDA.ipynb)
+Deep dive into the data coverage, family-level risks, and the "Climate Heroes" of the collection.
+:::
+
+::: {.g-col-4}
+### 🗺️ Maps
+[**Interactive Risk Map**](notebooks/color-coded-era-visualization.ipynb)
+Explore the garden spatially. Toggle between 2050 and 2090 scenarios to see the "heat sink" effect on specific beds.
+:::
+
+::: {.g-col-4}
+### 🎯 Strategy
+[**Cluster Analysis**](notebooks/k-cluster_analysis.ipynb)
+Review the K-Means clustering results that define our curatorial response groups.
+:::
+
+:::
