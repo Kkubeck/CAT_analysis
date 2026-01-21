@@ -16,8 +16,8 @@ website:
         text: "Data Validation"
       - href: notebooks/Joined_EDA.ipynb
         text: "Exploratory Analysis"
-      - href: notebooks/CAT_climate_suitability_rating_interactive_map.ipynb
-        text: "Suitability Ratings map"
+      - href: maps.qmd
+        text: "Suitability Ratings Map"
 
 format:
   html:

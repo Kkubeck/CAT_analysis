@@ -15,7 +15,7 @@ Our analysis covers **82.2%** of the documented collection, revealing distinct t
 
 * **The 2050 Tipping Point:** While many woody taxa remain resilient through 2050, herbaceous perennials show earlier signs of stress.
 * **Spatial Vulnerability:** Risk is not evenly distributed. The **Asian Garden** and **Alpine** sections face higher cumulative stress than the Carolinian Forest.
-* **Strategic Clusters:** We have segmented the collection into four management groups: *Resilient*, *Moderate*, *Vulnerable*, and *Highly Vulnerable*.
+
 
 ## Explore the Data
 
@@ -29,14 +29,9 @@ Deep dive into the data coverage, family-level risks, and the "Climate Heroes" o
 
 ::: {.g-col-4}
 ### 🗺️ Maps
-[**Interactive Risk Map**](notebooks/color-coded-era-visualization.ipynb)
-Explore the garden spatially. Toggle between 2050 and 2090 scenarios to see the "heat sink" effect on specific beds.
+[**Interactive Risk Map**](maps.qmd) Explore the garden spatially. Toggle between 2050 and 2090 scenarios to see the "heat sink" effect on specific beds.
 :::
 
-::: {.g-col-4}
-### 🎯 Strategy
-[**Cluster Analysis**](notebooks/k-cluster_analysis.ipynb)
-Review the K-Means clustering results that define our curatorial response groups.
-:::
+
 
 :::
