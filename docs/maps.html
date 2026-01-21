@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UBC Botanical Garden Climate Adaptation Analysis – UBCBG Climate Analysis</title>
+<title>Interactive Risk Maps – UBCBG Climate Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Exploratory Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maps.html"> 
+    <a class="nav-link active" href="./maps.html" aria-current="page"> 
 <span class="menu-text">Suitability Ratings Map</span></a>
   </li>  
 </ul>
@@ -125,11 +125,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a>
-  <ul class="collapse">
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#explore-the-data" id="toc-explore-the-data" class="nav-link" data-scroll-target="#explore-the-data">Explore the Data</a></li>
-  </ul></li>
+  <li><a href="#woody-plants" id="toc-woody-plants" class="nav-link active" data-scroll-target="#woody-plants">🌳 Woody Plants</a></li>
+  <li><a href="#herbaceous-perennials" id="toc-herbaceous-perennials" class="nav-link" data-scroll-target="#herbaceous-perennials">🌿 Herbaceous Perennials</a></li>
   </ul>
 </nav>
     </div>
@@ -138,8 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UBC Botanical Garden Climate Adaptation Analysis</h1>
-<p class="subtitle lead">Data-driven strategies for the 2050 and 2090 climate scenarios</p>
+<h1 class="title">Interactive Risk Maps</h1>
 </div>
 
 
@@ -156,32 +152,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level1">
-<h1>Project Overview</h1>
-<p>The <strong>Climate Adaptation Tool (CAT)</strong> analysis provides a comprehensive assessment of the UBC Botanical Garden’s collection against projected climate shifts. By integrating historical records with localized climate modeling, this project identifies risks, opportunities, and strategic priorities for curatorial management.</p>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<p>Our analysis covers <strong>82.2%</strong> of the documented collection, revealing distinct trends in survivability:</p>
-<ul>
-<li><strong>The 2050 Tipping Point:</strong> While many woody taxa remain resilient through 2050, herbaceous perennials show earlier signs of stress.</li>
-<li><strong>Spatial Vulnerability:</strong> Risk is not evenly distributed. The <strong>Asian Garden</strong> and <strong>Alpine</strong> sections face higher cumulative stress than the Carolinian Forest.</li>
-</ul>
+<p>Select a climate scenario below to open the interactive map. <em>(Maps open in a new window for best performance)</em></p>
+<section id="woody-plants" class="level2">
+<h2 class="anchored" data-anchor-id="woody-plants">🌳 Woody Plants</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Current</strong></td>
+<td style="text-align: left;">Present day conditions</td>
+<td style="text-align: left;"><a href="maps/Woody_Current.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2050</strong></td>
+<td style="text-align: left;">Emissions Limited</td>
+<td style="text-align: left;"><a href="maps/Woody_2050.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>2090</strong></td>
+<td style="text-align: left;">Business as Usual</td>
+<td style="text-align: left;"><a href="maps/Woody_2090.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2090 (+1°C)</strong></td>
+<td style="text-align: left;">Extreme Warming</td>
+<td style="text-align: left;"><a href="maps/Woody_2090_plus_1_degree.html" target="_blank">View Map</a></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="explore-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="explore-the-data">Explore the Data</h2>
-<div class="grid">
-<section id="trends" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="trends">📊 Trends</h3>
-<p><a href="./notebooks/Joined_EDA.html"><strong>Exploratory Analysis</strong></a> Deep dive into the data coverage, family-level risks, and the “Climate Heroes” of the collection.</p>
-</section>
-<section id="maps" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="maps">🗺️ Maps</h3>
-<p><a href="./maps.html"><strong>Interactive Risk Map</strong></a> Explore the garden spatially. Toggle between 2050 and 2090 scenarios to see the “heat sink” effect on specific beds.</p>
-</section>
-</div>
+<section id="herbaceous-perennials" class="level2">
+<h2 class="anchored" data-anchor-id="herbaceous-perennials">🌿 Herbaceous Perennials</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Current</strong></td>
+<td style="text-align: left;">Present day conditions</td>
+<td style="text-align: left;"><a href="maps/Perennial_Current.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2050</strong></td>
+<td style="text-align: left;">Emissions Limited</td>
+<td style="text-align: left;"><a href="maps/Perennial_2050.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>2090</strong></td>
+<td style="text-align: left;">Business as Usual</td>
+<td style="text-align: left;"><a href="maps/Perennial_2090.html" target="_blank">View Map</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2090 (+1°C)</strong></td>
+<td style="text-align: left;">Extreme Warming</td>
+<td style="text-align: left;"><a href="maps/Perennial_2090_plus_1_degree.html" target="_blank">View Map</a></td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
