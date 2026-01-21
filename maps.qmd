@@ -1,0 +1,24 @@
+---
+title: "Interactive Risk Maps"
+---
+
+Select a climate scenario below to open the interactive map.
+*(Maps open in a new window for best performance)*
+
+## 🌳 Woody Plants
+
+| Scenario | Description | Link |
+|:---|:---|:---|
+| **Current** | Present day conditions | [View Map](maps/Woody_Current.html){target="_blank"} |
+| **2050** | Emissions Limited | [View Map](maps/Woody_2050.html){target="_blank"} |
+| **2090** | Business as Usual | [View Map](maps/Woody_2090.html){target="_blank"} |
+| **2090 (+1°C)** | Extreme Warming | [View Map](maps/Woody_2090_plus_1_degree.html){target="_blank"} |
+
+## 🌿 Herbaceous Perennials
+
+| Scenario | Description | Link |
+|:---|:---|:---|
+| **Current** | Present day conditions | [View Map](maps/Perennial_Current.html){target="_blank"} |
+| **2050** | Emissions Limited | [View Map](maps/Perennial_2050.html){target="_blank"} |
+| **2090** | Business as Usual | [View Map](maps/Perennial_2090.html){target="_blank"} |
+| **2090 (+1°C)** | Extreme Warming | [View Map](maps/Perennial_2090_plus_1_degree.html){target="_blank"} |
