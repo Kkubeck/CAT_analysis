@@ -3,8 +3,9 @@ project:
   output-dir: docs
 
 execute:
-  echo: false
-  warning: false # Hides python warnings
+  echo: false      # Do not show the source code in the output
+  warning: false   # Do not show warning messages
+  message: false   # Do not show package loading messages
 
 website:
   title: "UBCBG Climate Analysis"
@@ -13,7 +14,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      # NOTICE: The "notebooks/" prefix is required here
       - href: notebooks/2025_taxonomy_backbone_EDA.ipynb
         text: "Taxonomy Backbone"
       - href: notebooks/data_validation.ipynb
