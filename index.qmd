@@ -5,13 +5,13 @@ subtitle: "Data-driven strategies for the 2050 and 2090 climate scenarios"
 
 # Project Overview
 
-The **Climate Adaptation Tool (CAT)** analysis provides a comprehensive assessment of the UBC Botanical Garden's collection against projected climate shifts. By integrating historical records with localized climate modeling, this project identifies risks, opportunities, and strategic priorities for curatorial management.
+The **Climate Assessment Tool (CAT)** provided by Botanical Gardens Conservation Internation (BGCI) analysis provides a method to assessment of the UBC Botanical Garden's collection against projected climate shifts. By integrating historical growth records from >3600 institutions from across the world,  with localized climate modeling, the BGCI's CAT tool attempts to describe a plants abilituy to adapt to a theoretical future 'climate envelope'. This project uses the CAT data provided by the BGCI, along with UBCBG Garden Collection data andf Taxonomic data from World Flora Online to attempt identify risks, opportunities, and strategic priorities for curatorial management.
 
 
 
 ## Key Findings
 
-Our analysis covers **82.2%** of the documented collection, revealing distinct trends in survivability:
+The analysis covers **82.2%** of the documented collection, revealing distinct trends in survivability:
 
 * **The 2050 Tipping Point:** While many woody taxa remain resilient through 2050, herbaceous perennials show earlier signs of stress.
 * **Spatial Vulnerability:** Risk is not evenly distributed. The **Asian Garden** and **Alpine** sections face higher cumulative stress than the Carolinian Forest.

@@ -2,8 +2,14 @@
 title: "Interactive Risk Maps"
 ---
 
+### 🗺️ Visualization Note
+**Mapping Technique**
+To accurately visualize the density of the collection on a limited screen:
+* **Jittering:** We applied a randomized spatial offset of **~6 meters** to mass plantings (e.g., *Hosta* beds) and shared coordinates. This "explodes" dense clusters to reveal individual plants without distorting their true location.
+* **Layers:** Points are layered by **LifeForm**, allowing independent assessment of the canopy (Trees) vs. the understory (Perennials).
+
 Select a climate scenario below to open the interactive map.
-*(Maps open in a new window for best performance)*
+*(Maps open in a new window)*
 
 ## 🌳 Woody Plants
 

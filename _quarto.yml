@@ -8,20 +8,20 @@ execute:
   message: false   # Do not show package loading messages
 
 website:
-  title: "UBCBG Climate Analysis"
+  title: "UBCBG: Climate Assessment Tool (CAT) Analysis"
   navbar:
     background: "#002145"
     left:
       - href: index.qmd
         text: Home
       - href: notebooks/2025_taxonomy_backbone_EDA.ipynb
-        text: "Taxonomy Backbone"
+        text: "Global Taxonomy Backbone"
       - href: notebooks/data_validation.ipynb
-        text: "Data Validation"
+        text: "CAT v1 vs. v2 : Data validation"
       - href: notebooks/Joined_EDA.ipynb
-        text: "Exploratory Analysis"
+        text: "Exploratory Analysis of the UBC CAT data"
       - href: maps.qmd
-        text: "Suitability Ratings Map"
+        text: "Era based Suitability Ratings Map"
 
 format:
   html:
