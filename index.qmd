@@ -7,7 +7,7 @@ subtitle: "Data-driven strategies for the 2050 and 2090 climate scenarios"
 
 The **Climate Assessment Tool (CAT)** provided by Botanical Gardens Conservation Internation (BGCI) analysis provides a method to assessment of the UBC Botanical Garden's collection against projected climate shifts. By integrating historical growth records from >3600 institutions from across the world,  with localized climate modeling, the BGCI's CAT tool attempts to describe a plants abilituy to adapt to a theoretical future 'climate envelope'. This project uses the CAT data provided by the BGCI, along with UBCBG Garden Collection data andf Taxonomic data from World Flora Online to attempt identify risks, opportunities, and strategic priorities for curatorial management.
 
-
+[**View Data Sources & Methodology**](methods.qmd){.btn .btn-outline-primary}
 
 ## Key Findings
 
