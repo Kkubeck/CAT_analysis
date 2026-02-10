@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Joined Dataset EDA – UBCBG Climate Analysis</title>
+<title>Joined Dataset EDA – UBCBG: Climate Assessment Tool (CAT) Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -147,7 +112,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">UBCBG Climate Analysis</span>
+    <span class="navbar-title">UBCBG: Climate Assessment Tool (CAT) Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -161,20 +126,24 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../methods.html"> 
+<span class="menu-text">Data Sources &amp; Methods</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../notebooks/2025_taxonomy_backbone_EDA.html"> 
-<span class="menu-text">Taxonomy Backbone</span></a>
+<span class="menu-text">Global Taxonomy Backbone</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../notebooks/data_validation.html"> 
-<span class="menu-text">Data Validation</span></a>
+<span class="menu-text">CAT v1 vs.&nbsp;v2 : Data validation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../notebooks/Joined_EDA.html" aria-current="page"> 
-<span class="menu-text">Exploratory Analysis</span></a>
+<span class="menu-text">Exploratory Analysis of the UBC CAT data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../maps.html"> 
-<span class="menu-text">Suitability Ratings Map</span></a>
+<span class="menu-text">Era based Suitability Ratings Map</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -192,11 +161,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#import-libraries-and-datasets" id="toc-import-libraries-and-datasets" class="nav-link active" data-scroll-target="#import-libraries-and-datasets">1. Import libraries and datasets</a></li>
-  <li><a href="#coverage-analysis" id="toc-coverage-analysis" class="nav-link" data-scroll-target="#coverage-analysis">2. Coverage Analysis</a></li>
-  <li><a href="#climate-rating-trends-within-the-cat-data-for-ubc" id="toc-climate-rating-trends-within-the-cat-data-for-ubc" class="nav-link" data-scroll-target="#climate-rating-trends-within-the-cat-data-for-ubc">3. Climate Rating Trends within the CAT data for UBC</a></li>
-  <li><a href="#conservation-red-flags-global-taxonomic-context" id="toc-conservation-red-flags-global-taxonomic-context" class="nav-link" data-scroll-target="#conservation-red-flags-global-taxonomic-context">4. Conservation Red-Flags (Global Taxonomic Context)</a></li>
-  <li><a href="#management-priorities-the-20-rule" id="toc-management-priorities-the-20-rule" class="nav-link" data-scroll-target="#management-priorities-the-20-rule">5. Management Priorities (The &gt;20 Rule)</a></li>
+  <li><a href="#methodology-note" id="toc-methodology-note" class="nav-link active" data-scroll-target="#methodology-note">📋 Methodology Note</a></li>
+  <li><a href="#import-libraries-and-datasets" id="toc-import-libraries-and-datasets" class="nav-link" data-scroll-target="#import-libraries-and-datasets">1. Import libraries and datasets</a></li>
+  <li><a href="#cat-coverage-analysis" id="toc-cat-coverage-analysis" class="nav-link" data-scroll-target="#cat-coverage-analysis">2. CAT Coverage Analysis</a>
+  <ul class="collapse">
+  <li><a href="#climate-rating-trends-within-the-ubcbg-collection-data" id="toc-climate-rating-trends-within-the-ubcbg-collection-data" class="nav-link" data-scroll-target="#climate-rating-trends-within-the-ubcbg-collection-data">3. Climate Rating Trends within the UBCBG Collection data</a></li>
+  </ul></li>
+  <li><a href="#potential-conservation-red-flags-in-a-global-taxonomic-context" id="toc-potential-conservation-red-flags-in-a-global-taxonomic-context" class="nav-link" data-scroll-target="#potential-conservation-red-flags-in-a-global-taxonomic-context">4. Potential conservation Red-Flags in a Global Taxonomic Context</a></li>
+  <li><a href="#potential-management-priorities-the-20-rule" id="toc-potential-management-priorities-the-20-rule" class="nav-link" data-scroll-target="#potential-management-priorities-the-20-rule">5. Potential Management Priorities (The &gt;20 Rule)</a></li>
   <li><a href="#climate-heroes-exceptional-stability-in-2090" id="toc-climate-heroes-exceptional-stability-in-2090" class="nav-link" data-scroll-target="#climate-heroes-exceptional-stability-in-2090">6. Climate Heroes (Exceptional Stability in 2090)</a></li>
   <li><a href="#spatial-risk-map" id="toc-spatial-risk-map" class="nav-link" data-scroll-target="#spatial-risk-map">7. Spatial Risk Map</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">8. Appendix</a></li>
@@ -225,34 +197,14 @@ window.Quarto = {
 </header>
 
 
-<p><em>Exploratory analysis of UBC collection attributes joined to CAT climate ratings and global taxonomic context.</em></p>
-<p><strong>Conventions</strong> - Paths are relative to the notebook location. - Unless stated otherwise, data are treated as read-only and the notebook writes outputs to <code>../data/</code>.</p>
+<section id="methodology-note" class="level3">
+<h3 class="anchored" data-anchor-id="methodology-note">📋 Methodology Note</h3>
+<p><strong>Data Cleaning &amp; Scope</strong> This exploratory analysis assesses the coverage of the CAT ratings against the full UBCBG IrisBG living collection. Additionally a taxonomic backbone from the World Online Flora was added to discuss some specific challenges of conservation. * <strong>Inclusion Criteria:</strong> All taxa that have been historically grown at the current UBC Botanical Garden (1970 -2024), taxa with full genera an specific epithet available in IrisBG and with a corresponding ‘valid’ status in WFO, taxa that are available in CAT database. Accessions that have a value in the Lifeform field. * <strong>Exclusion:</strong> Taxa that are cultivars of are missing species information, Nursery and Nitobe material for ease of mapping, Accession whose lifeform is not included in this list: * woody_list = [‘Tree’, ‘Shrub’, ‘Shrub or Tree’] * herb_list = [‘Herbaceous Perennial’, ‘Climber_Liana_Vine’]. * <strong>Validation:</strong> Taxa names were cross-referenced against [WFO Taxonomic Backbone] to resolve synonyms.</p>
+</section>
 <section id="import-libraries-and-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="import-libraries-and-datasets">1. Import libraries and datasets</h2>
-<div id="8cdc32a9-5b1b-4f3e-8092-1617de9da03c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the CSV file</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The keys in this file have been corrected to 2050 and 2090</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">"../data/FullJoin3_with_climate_ratings-proofed.csv"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Map the long column names to shorthand versions for easier coding</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>column_mapping <span class="op">=</span> {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_current_sheet'</span>: <span class="st">'rating_2025_current'</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_emissions_limited_2050'</span>: <span class="st">'rating_2050_limited'</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_business_as_usual_2090'</span>: <span class="st">'rating_2090_bau'</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_bau_plus_1degree_2090'</span>: <span class="st">'rating_2090_heat_sink'</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns<span class="op">=</span>column_mapping)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display first few rows to confirm keys and data structure</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>display(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Display a sample of 5 observations (accession items).</p>
+<div id="8cdc32a9-5b1b-4f3e-8092-1617de9da03c" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 
@@ -412,107 +364,30 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="eae16419" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display / plotting defaults</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'figure.dpi'</span>] <span class="op">=</span> <span class="dv">110</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'savefig.dpi'</span>] <span class="op">=</span> <span class="dv">110</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="coverage-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="coverage-analysis">2. Coverage Analysis</h2>
+<section id="cat-coverage-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="cat-coverage-analysis">2. CAT Coverage Analysis</h2>
+<p>Taxa submitted to CAT that were returned by the tool without data (NA) in the climate rating field were discarded. ** % CAT coverage = (total accession with CAT / total UBCBG accessions) * 100 **</p>
 <div id="31327415-0977-4302-befe-b1de2f31ae4f" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Filter the dataset for included lifeforms only</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>included_lifeforms <span class="op">=</span> [<span class="st">'Tree'</span>, <span class="st">'Shrub'</span>, <span class="st">'Shrub or Tree'</span>, <span class="st">'Herbaceous Perennial'</span>, <span class="st">'Climber_Liana_Vine'</span>]</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df[df[<span class="st">'LifeForm'</span>].isin(included_lifeforms)].copy()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Define our target subsets</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>tree_shrub_list <span class="op">=</span> [<span class="st">'Tree'</span>, <span class="st">'Shrub'</span>, <span class="st">'Shrub or Tree'</span>]</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>perennial_list <span class="op">=</span> [<span class="st">'Herbaceous Perennial'</span>, <span class="st">'Climber_Liana_Vine'</span>]</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>tree_shrub_df <span class="op">=</span> df_filtered[df_filtered[<span class="st">'LifeForm'</span>].isin(tree_shrub_list)]</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>perennial_df <span class="op">=</span> df_filtered[df_filtered[<span class="st">'LifeForm'</span>].isin(perennial_list)]</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Helper function for counts</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>climate_cols <span class="op">=</span> [<span class="st">'rating_2025_current'</span>, <span class="st">'rating_2050_limited'</span>, <span class="st">'rating_2090_bau'</span>, <span class="st">'rating_2090_heat_sink'</span>]</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_counts(data):</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Counts how many rows have at least one climate rating</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    with_rating <span class="op">=</span> data[climate_cols].notna().<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>).<span class="bu">sum</span>()</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [with_rating, <span class="bu">len</span>(data) <span class="op">-</span> with_rating]</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Visualization</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">"With Climate Rating"</span>, <span class="st">"Without Rating"</span>]</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#2ecc71'</span>, <span class="st">'#e74c3c'</span>]</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">10</span>))</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">2</span>, height_ratios<span class="op">=</span>[<span class="fl">1.5</span>, <span class="dv">1</span>])</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Large Pie: Total Included Collection</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax0 <span class="op">=</span> plt.subplot(gs[<span class="dv">0</span>, :])</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax0.pie(get_counts(df_filtered), labels<span class="op">=</span>labels, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, </span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        colors<span class="op">=</span>colors, explode<span class="op">=</span>(<span class="fl">0.05</span>, <span class="dv">0</span>), textprops<span class="op">=</span>{<span class="st">'fontsize'</span>: <span class="dv">14</span>})</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax0.set_title(<span class="st">"Total Included Collection</span><span class="ch">\n</span><span class="st">(Woody + Perennial)"</span>, fontsize<span class="op">=</span><span class="dv">18</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Small Pie: Woody Subset (Tree/Shrub)</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>ax1.pie(get_counts(tree_shrub_df), labels<span class="op">=</span>labels, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, colors<span class="op">=</span>colors)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Subset: Trees &amp; Shrubs"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Small Pie: Perennial/Climber Subset</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax2.pie(get_counts(perennial_df), labels<span class="op">=</span>labels, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, colors<span class="op">=</span>colors)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Subset: Perennials &amp; Climbers"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="climate-rating-trends-within-the-cat-data-for-ubc" class="level2">
-<h2 class="anchored" data-anchor-id="climate-rating-trends-within-the-cat-data-for-ubc">3. Climate Rating Trends within the CAT data for UBC</h2>
-<p>This section identifies the “Mean Drop” in suitability as we move toward the late-century urban heat-sink scenario.</p>
+<section id="climate-rating-trends-within-the-ubcbg-collection-data" class="level3">
+<h3 class="anchored" data-anchor-id="climate-rating-trends-within-the-ubcbg-collection-data">3. Climate Rating Trends within the UBCBG Collection data</h3>
+<p>This section identifies Family and Genera that exhibit an “average” drop in growing suitability within its members.</p>
+<p><strong>NOTE:</strong> The driver of a plant’s “suitability” can be varied. In the case of CAT data, the most important driver is considered to be temperature.</p>
+<ul>
+<li>Lack of temperature can be as significant as too much heat.</li>
+<li>Botanical gardens often deal with plants that are outside their natural temperature envelope.</li>
+<li>Collection taxa seen as “less adapted” by the Climate Assessment Tool under current conditions reflect “zone stretching”: planting into warmer microclimates in the garden.</li>
+<li>Long-term climate misalignment for plants is often due to heat, not cold weather.</li>
+</ul>
 <div id="64279c99-2e87-467f-849a-7bd74bd8339c" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Calculate Average Ratings per Family for comparison</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>avg_ratings <span class="op">=</span> df_filtered.groupby(<span class="st">'Family'</span>)[[<span class="st">'rating_2025_current'</span>, <span class="st">'rating_2090_heat_sink'</span>]].mean()</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Calculate the 'Suitability Drop'</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>avg_ratings[<span class="st">'suitability_drop'</span>] <span class="op">=</span> avg_ratings[<span class="st">'rating_2025_current'</span>] <span class="op">-</span> avg_ratings[<span class="st">'rating_2090_heat_sink'</span>]</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Apply the 2-decimal rounding rule</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>avg_ratings <span class="op">=</span> avg_ratings.<span class="bu">round</span>(<span class="dv">2</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Families experiencing the most significant decline in suitability (2025 vs 2090 Heat Sink):"</span>)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>display(avg_ratings.sort_values(<span class="st">'suitability_drop'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>))</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Calculate overall garden risk percentage across scenarios</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>scenarios <span class="op">=</span> {</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2025'</span>: <span class="st">'rating_2025_current'</span>,</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2050 (Limited)'</span>: <span class="st">'rating_2050_limited'</span>,</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2090 (BAU)'</span>: <span class="st">'rating_2090_bau'</span>,</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2090 (+1C Heat Sink)'</span>: <span class="st">'rating_2090_heat_sink'</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>risk_trend <span class="op">=</span> {}</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, col <span class="kw">in</span> scenarios.items():</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    pct <span class="op">=</span> (df_filtered[col] <span class="op">&lt;=</span> <span class="dv">3</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    risk_trend[label] <span class="op">=</span> <span class="bu">round</span>(pct, <span class="dv">2</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization of the migration to risk</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.plot(<span class="bu">list</span>(risk_trend.keys()), <span class="bu">list</span>(risk_trend.values()), marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Percentage of Collection in "Danger Zone" (Rating 0-3)'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'</span><span class="sc">% o</span><span class="st">f Plants at Risk'</span>)</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Families experiencing the most significant decline in suitability (2025 vs 2090 Heat Sink):</code></pre>
 </div>
@@ -604,68 +479,28 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-5-output-3.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-4-output-3.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="conservation-red-flags-global-taxonomic-context" class="level2">
-<h2 class="anchored" data-anchor-id="conservation-red-flags-global-taxonomic-context">4. Conservation Red-Flags (Global Taxonomic Context)</h2>
-<p>This section uses the WFO backbone to identify families that are evolutionarily unique at a global scale. We then filter these to find those at highest risk in our 2090 Heat Sink model.</p>
-<div id="1b3ceca7-d58c-4fdf-ad81-8aab42ce9175" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Load the WFO Backbone </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (Adjusting path to local environment)</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>wfo_path <span class="op">=</span> <span class="st">'../data/wfo_accepted_species_family_genus_tidy.csv'</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>wfo_df <span class="op">=</span> pd.read_csv(wfo_path)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Aggregate WFO to the Family level (Global Stats)</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>wfo_family_stats <span class="op">=</span> wfo_df.groupby(<span class="st">'family'</span>).agg({</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n_genera_in_family'</span>: <span class="st">'first'</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n_accepted_species_in_family'</span>: <span class="st">'first'</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>wfo_family_stats.columns <span class="op">=</span> [<span class="st">'Family'</span>, <span class="st">'Global_Genus_Count'</span>, <span class="st">'Global_Species_Count'</span>]</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Merge with the main garden dataframe (df_filtered from Section 2)</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>df_taxonomic <span class="op">=</span> pd.merge(df_filtered, wfo_family_stats, on<span class="op">=</span><span class="st">'Family'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Calculate Family-level Risk for the 2090 Heat Sink Scenario</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># We look for the 'Danger Zone' (Rating &lt;= 3)</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>risk_col <span class="op">=</span> <span class="st">'rating_2090_heat_sink'</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>threshold <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the summary to avoid NameErrors</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>family_conservation_summary <span class="op">=</span> df_taxonomic.dropna(subset<span class="op">=</span>[risk_col]).groupby(<span class="st">'Family'</span>).agg(</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    Garden_Count<span class="op">=</span>(<span class="st">'Family'</span>, <span class="st">'count'</span>),</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    Mean_Rating_2090<span class="op">=</span>(risk_col, <span class="st">'mean'</span>),</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    At_Risk_Count<span class="op">=</span>(risk_col, <span class="kw">lambda</span> x: (x <span class="op">&lt;=</span> threshold).<span class="bu">sum</span>()),</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    Global_Genera<span class="op">=</span>(<span class="st">'Global_Genus_Count'</span>, <span class="st">'first'</span>),</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    Global_Species<span class="op">=</span>(<span class="st">'Global_Species_Count'</span>, <span class="st">'first'</span>)</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentages and round for authenticity</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>family_conservation_summary[<span class="st">'Percent_At_Risk'</span>] <span class="op">=</span> (family_conservation_summary[<span class="st">'At_Risk_Count'</span>] <span class="op">/</span> family_conservation_summary[<span class="st">'Garden_Count'</span>] <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">2</span>)</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>family_conservation_summary[<span class="st">'Mean_Rating_2090'</span>] <span class="op">=</span> family_conservation_summary[<span class="st">'Mean_Rating_2090'</span>].<span class="bu">round</span>(<span class="dv">2</span>)</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Split and Display Outputs</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Tier 1: Globally Monospecific (1 Genus, 1 Species)</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>monospecific <span class="op">=</span> family_conservation_summary[</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    (family_conservation_summary[<span class="st">'Global_Genera'</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> </span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    (family_conservation_summary[<span class="st">'Global_Species'</span>] <span class="op">==</span> <span class="dv">1</span>)</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>].sort_values(<span class="st">'Mean_Rating_2090'</span>)</span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Tier 2: Globally Monogeneric (1 Genus, &gt;1 Species)</span></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>monogeneric <span class="op">=</span> family_conservation_summary[</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>    (family_conservation_summary[<span class="st">'Global_Genera'</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> </span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>    (family_conservation_summary[<span class="st">'Global_Species'</span>] <span class="op">&gt;</span> <span class="dv">1</span>)</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>].sort_values(<span class="st">'Mean_Rating_2090'</span>)</span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- TIER 1: GLOBALLY MONOSPECIFIC FAMILIES ---"</span>)</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>display(monospecific[[<span class="st">'Family'</span>, <span class="st">'Garden_Count'</span>, <span class="st">'Mean_Rating_2090'</span>, <span class="st">'Percent_At_Risk'</span>]])</span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- TIER 2: GLOBALLY MONOGENERIC FAMILIES ---"</span>)</span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>display(monogeneric[[<span class="st">'Family'</span>, <span class="st">'Garden_Count'</span>, <span class="st">'Mean_Rating_2090'</span>, <span class="st">'Percent_At_Risk'</span>, <span class="st">'Global_Species'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="potential-conservation-red-flags-in-a-global-taxonomic-context" class="level2">
+<h2 class="anchored" data-anchor-id="potential-conservation-red-flags-in-a-global-taxonomic-context">4. Potential conservation Red-Flags in a Global Taxonomic Context</h2>
+<ul>
+<li><ul>
+<li>If risk and diversity are mixed among taxonomic groups, can identifying groups that are more ‘unique’ highlight potential priorities?</li>
+<li>WFO Taxonomic Backbone used to group and count valid taxa by family, genus and species.
+<ul>
+<li>plant family with a single valid described species are considered a monotypic family.</li>
+<li>Plant Genera that include a single described species are considered a monotypic Genera</li>
+</ul></li>
+<li>Global numbers for diversity in plant family and Genera were compared to the UBCBG’s historical Collection to explore the ‘portion’ of diversity held</li>
+<li></li>
+</ul></li>
+</ul>
+<div id="1b3ceca7-d58c-4fdf-ad81-8aab42ce9175" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>--- TIER 1: GLOBALLY MONOSPECIFIC FAMILIES ---</code></pre>
 </div>
@@ -906,47 +741,10 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="management-priorities-the-20-rule" class="level2">
-<h2 class="anchored" data-anchor-id="management-priorities-the-20-rule">5. Management Priorities (The &gt;20 Rule)</h2>
+<section id="potential-management-priorities-the-20-rule" class="level2">
+<h2 class="anchored" data-anchor-id="potential-management-priorities-the-20-rule">5. Potential Management Priorities (The &gt;20 Rule)</h2>
 <p>While Section 4 deals with “Evolutionary Gems,” Section 5 deals with the “Workhorses” of the garden. These are the families with at least 20 accessions. High risk here indicates a need for significant labor, budget allocation, or a transition to new taxa.</p>
 <div id="7e0bdb86-835a-4c60-afed-8e9ad45e53d3" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Filter for families with &gt;= 20 representatives in the garden</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># We use the summary dataframe 'family_conservation_summary' defined in Section 4</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>management_priorities <span class="op">=</span> family_conservation_summary[family_conservation_summary[<span class="st">'Garden_Count'</span>] <span class="op">&gt;=</span> <span class="dv">20</span>].copy()</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Sort by highest percentage in the danger zone (Rating 0-3)</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>management_priorities <span class="op">=</span> management_priorities.sort_values(<span class="st">'Percent_At_Risk'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- MANAGEMENT PRIORITIES: Large-scale Failure Points (&gt;20 members) ---"</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"These groups require systemic adaptation strategies (e.g., site mitigation or species replacement)."</span>)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>display(management_priorities.head(<span class="dv">10</span>))</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Visualization: Management Priority Bar Chart</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed the FutureWarning by assigning y to hue and setting legend=False</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>top_management <span class="op">=</span> management_priorities.head(<span class="dv">10</span>)</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>sns.barplot(</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>top_management, </span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Percent_At_Risk'</span>, </span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Family'</span>, </span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'Family'</span>,      <span class="co"># Fixed: Assigning hue to the y-axis variable</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span><span class="st">'OrRd_r'</span>, </span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>       <span class="co"># Fixed: Hiding the redundant legend</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top 10 Management Priorities (Families &gt;= 20 Members)'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'</span><span class="sc">% o</span><span class="st">f Family in Danger Zone (Rating 0-3)'</span>)</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Family'</span>)</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add percentage labels to the end of the bars for clarity</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, v <span class="kw">in</span> <span class="bu">enumerate</span>(top_management[<span class="st">'Percent_At_Risk'</span>]):</span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    plt.text(v <span class="op">+</span> <span class="dv">1</span>, i, <span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span>, va<span class="op">=</span><span class="st">'center'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">110</span>) <span class="co"># Leave room for the text labels</span></span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- MANAGEMENT PRIORITIES: Large-scale Failure Points (&gt;20 members) ---
 These groups require systemic adaptation strategies (e.g., site mitigation or species replacement).</code></pre>
@@ -1077,7 +875,7 @@ These groups require systemic adaptation strategies (e.g., site mitigation or sp
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-7-output-3.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-6-output-3.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1087,49 +885,6 @@ These groups require systemic adaptation strategies (e.g., site mitigation or sp
 <h2 class="anchored" data-anchor-id="climate-heroes-exceptional-stability-in-2090">6. Climate Heroes (Exceptional Stability in 2090)</h2>
 <p>In this section, we identify families with high mean suitability ratings (<span class="math inline">\(\ge 9.0\)</span>) in the 2090 Heat Sink scenario. We split these into Management Heroes (reliable, high-volume groups) and Evolutionary Heroes (unique lineages that are surprisingly resilient).</p>
 <div id="228a2164-e020-449b-bce0-eb21db50ada3" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define 'Climate Heroes' (Mean Rating &gt;= 9.0 in 2090 Heat Sink)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>hero_threshold <span class="op">=</span> <span class="fl">9.0</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>risk_col <span class="op">=</span> <span class="st">'rating_2090_heat_sink'</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We use the family-level summary generated in previous steps</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>family_hero_summary <span class="op">=</span> family_conservation_summary[family_conservation_summary[<span class="st">'Mean_Rating_2090'</span>] <span class="op">&gt;=</span> hero_threshold].copy()</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Split into Management and Evolutionary Tiers</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Management Heroes: Families with &gt;= 20 accessions (The Future Backbone)</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>management_heroes <span class="op">=</span> family_hero_summary[family_hero_summary[<span class="st">'Garden_Count'</span>] <span class="op">&gt;=</span> <span class="dv">20</span>].sort_values(<span class="st">'Garden_Count'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Evolutionary Heroes: Globally Monogeneric lineages (Unique but Resilient)</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>evolutionary_heroes <span class="op">=</span> family_hero_summary[family_hero_summary[<span class="st">'Global_Genera'</span>] <span class="op">==</span> <span class="dv">1</span>].sort_values(<span class="st">'Mean_Rating_2090'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Output Table: Management Heroes</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- MANAGEMENT HEROES: Robust Large Groups (&gt;= 20 members) ---"</span>)</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>display(management_heroes[[<span class="st">'Family'</span>, <span class="st">'Garden_Count'</span>, <span class="st">'Mean_Rating_2090'</span>]].head(<span class="dv">10</span>))</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Output Table: Evolutionary Heroes</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- EVOLUTIONARY HEROES: Resilient Unique Lineages (Global Monogeneric) ---"</span>)</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>display(evolutionary_heroes[[<span class="st">'Family'</span>, <span class="st">'Garden_Count'</span>, <span class="st">'Global_Species'</span>, <span class="st">'Mean_Rating_2090'</span>]])</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Visualization: The Stability of Management Heroes</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>sns.barplot(</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>management_heroes.head(<span class="dv">10</span>), </span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Mean_Rating_2090'</span>, </span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Family'</span>, </span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'Family'</span>,</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span><span class="st">'Greens_r'</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top 10 Management Heroes (Resilient Large Families)'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Mean Rating (2090 Heat Sink)'</span>)</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Family'</span>)</span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">12</span>)</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>plt.legend([],[], frameon<span class="op">=</span><span class="va">False</span>) <span class="co"># Removes redundant legend</span></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels to the end of bars</span></span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, v <span class="kw">in</span> <span class="bu">enumerate</span>(management_heroes.head(<span class="dv">10</span>)[<span class="st">'Mean_Rating_2090'</span>]):</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>    plt.text(v <span class="op">+</span> <span class="fl">0.1</span>, i, <span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">"</span>, va<span class="op">=</span><span class="st">'center'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- MANAGEMENT HEROES: Robust Large Groups (&gt;= 20 members) ---</code></pre>
 </div>
@@ -1316,7 +1071,7 @@ These groups require systemic adaptation strategies (e.g., site mitigation or sp
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-8-output-5.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-7-output-5.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1326,97 +1081,17 @@ These groups require systemic adaptation strategies (e.g., site mitigation or sp
 <h2 class="anchored" data-anchor-id="spatial-risk-map">7. Spatial Risk Map</h2>
 <p>By mapping the collection according to its physical coordinates (LocationCoordX, LocationCoordY), we can move from “what” is at risk to “where” the risk is concentrated. This helps the garden’s operational staff identify specific garden beds or microclimates that may become “hot spots” for plant failure in the 2090 Heat Sink scenario.</p>
 <div id="d3479655-2db4-4cee-85e8-f8bbe8acd258" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Section 7</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Load Data</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Rename columns (Fixes the KeyError)</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>rename_dict <span class="op">=</span> {</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_current_sheet'</span>: <span class="st">'rating_2025_current'</span>,</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_emissions_limited_2050'</span>: <span class="st">'rating_2050_limited'</span>,</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_business_as_usual_2090'</span>: <span class="st">'rating_2090_bau'</span>,</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_bau_plus_1degree_2090'</span>: <span class="st">'rating_2090_heat_sink'</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns<span class="op">=</span>rename_dict)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Coordinate Cleaning &amp; Standardization</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix historical swapping: Latitude is always the positive value (~49), </span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Longitude is always the negative value (~-123).</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'lon'</span>] <span class="op">=</span> df[[<span class="st">'LocationCoordX'</span>, <span class="st">'LocationCoordY'</span>]].<span class="bu">min</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'lat'</span>] <span class="op">=</span> df[[<span class="st">'LocationCoordX'</span>, <span class="st">'LocationCoordY'</span>]].<span class="bu">max</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Filter Locations: Focusing on the Core Garden</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Exclude Nursery and Nitobe areas as requested</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>exclude_locs <span class="op">=</span> [<span class="st">'Nursery'</span>, <span class="st">'Nitobe Memorial Garden'</span>, <span class="st">'Nitobe'</span>]</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>df_garden <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'LocationName'</span>].isin(exclude_locs)].copy()</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove remaining spatial artifacts east of the main garden core (-123.245)</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>df_garden <span class="op">=</span> df_garden[df_garden[<span class="st">'lon'</span>] <span class="op">&lt;</span> <span class="op">-</span><span class="fl">123.245</span>].copy()</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Define Lifeform Subsets</span></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>woody_list <span class="op">=</span> [<span class="st">'Tree'</span>, <span class="st">'Shrub'</span>, <span class="st">'Shrub or Tree'</span>]</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>herb_list <span class="op">=</span> [<span class="st">'Herbaceous Perennial'</span>, <span class="st">'Climber_Liana_Vine'</span>]</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>woody_df <span class="op">=</span> df_garden[df_garden[<span class="st">'LifeForm'</span>].isin(woody_list)].copy()</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>herb_df <span class="op">=</span> df_garden[df_garden[<span class="st">'LifeForm'</span>].isin(herb_list)].copy()</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Visualization Function (Generates 1 Large + 3 Small graphs)</span></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_spatial_report(data, title_prefix):</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">14</span>))</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">3</span>, height_ratios<span class="op">=</span>[<span class="fl">1.5</span>, <span class="dv">1</span>])</span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Configuration for the 4 scenarios</span></span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    scenarios <span class="op">=</span> [</span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'rating_2090_heat_sink'</span>, <span class="ss">f'</span><span class="sc">{</span>title_prefix<span class="sc">}</span><span class="ss">: 2090 (+1C Heat Sink)'</span>, gs[<span class="dv">0</span>, :], <span class="dv">55</span>),</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'rating_2025_current'</span>, <span class="st">'2025 (Current)'</span>, gs[<span class="dv">1</span>, <span class="dv">0</span>], <span class="dv">18</span>),</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'rating_2050_limited'</span>, <span class="st">'2050 (Limited)'</span>, gs[<span class="dv">1</span>, <span class="dv">1</span>], <span class="dv">18</span>),</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'rating_2090_bau'</span>, <span class="st">'2090 (BAU)'</span>, gs[<span class="dv">1</span>, <span class="dv">2</span>], <span class="dv">18</span>)</span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate limits based on the actual data spread to maximize the view</span></span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    lon_min, lon_max <span class="op">=</span> data[<span class="st">'lon'</span>].quantile(<span class="fl">0.005</span>), data[<span class="st">'lon'</span>].quantile(<span class="fl">0.995</span>)</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>    lat_min, lat_max <span class="op">=</span> data[<span class="st">'lat'</span>].quantile(<span class="fl">0.005</span>), data[<span class="st">'lat'</span>].quantile(<span class="fl">0.995</span>)</span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> col, subtitle, spec, s <span class="kw">in</span> scenarios:</span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>        ax <span class="op">=</span> plt.subplot(spec)</span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>        valid <span class="op">=</span> data.dropna(subset<span class="op">=</span>[<span class="st">'lat'</span>, <span class="st">'lon'</span>, col])</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Color mapping: Red (Risk) to Green (Healthy)</span></span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>        scatter <span class="op">=</span> ax.scatter(valid[<span class="st">'lon'</span>], valid[<span class="st">'lat'</span>], c<span class="op">=</span>valid[col], </span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>                             cmap<span class="op">=</span><span class="st">'RdYlGn'</span>, s<span class="op">=</span>s, alpha<span class="op">=</span><span class="fl">0.8</span>, edgecolors<span class="op">=</span><span class="st">'none'</span>)</span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>        ax.set_title(subtitle, fontsize<span class="op">=</span><span class="dv">16</span> <span class="cf">if</span> spec <span class="op">==</span> gs[<span class="dv">0</span>, :] <span class="cf">else</span> <span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>        ax.set_xlim(lon_min, lon_max)</span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>        ax.set_ylim(lat_min, lat_max)</span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>        ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> spec <span class="op">==</span> gs[<span class="dv">0</span>, :]:</span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>            cbar <span class="op">=</span> plt.colorbar(scatter, ax<span class="op">=</span>ax)</span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>            cbar.set_label(<span class="st">'Climate Rating (0=Critical, 11=Ideal)'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> spec <span class="op">==</span> gs[<span class="dv">1</span>, <span class="dv">0</span>]:</span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>            ax.set_xlabel(<span class="st">'Longitude'</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">'Latitude'</span>)</span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>            ax.set_xticks([])<span class="op">;</span> ax.set_yticks([])</span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the Two Comprehensive Map Sets</span></span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>create_spatial_report(woody_df, <span class="st">"Woody Plants (Trees &amp; Shrubs)"</span>)</span>
-<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>create_spatial_report(herb_df, <span class="st">"Herbaceous &amp; Climbers"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Joined_EDA_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="Joined_EDA_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1425,31 +1100,6 @@ These groups require systemic adaptation strategies (e.g., site mitigation or sp
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">8. Appendix</h2>
 <div id="d918e54e-bf8d-463e-a39b-fd56964046f5" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Section 8: Actionable Curatorial Risk List (CSV Export)</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Filter for core garden areas and the "Danger Zone"</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># We exclude Nursery/Nitobe as they represent holding areas or distinct collections</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>exclude_locs <span class="op">=</span> [<span class="st">'Nursery'</span>, <span class="st">'Nitobe Memorial Garden'</span>, <span class="st">'Nitobe'</span>]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>df_garden_only <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'LocationName'</span>].isin(exclude_locs)].copy()</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Identify high-risk accessions (Rating 0-3 in 2090 Heat Sink)</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>curatorial_risk_list <span class="op">=</span> df_garden_only[df_garden_only[<span class="st">'rating_2090_heat_sink'</span>] <span class="op">&lt;=</span> <span class="dv">3</span>].copy()</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Select columns useful for curators in the field</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>curatorial_cols <span class="op">=</span> [</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'AccNoFull'</span>, <span class="st">'ItemAccNoFull'</span>, <span class="st">'Family'</span>, <span class="st">'Genus'</span>, <span class="st">'GenusSpecies'</span>, </span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'LifeForm'</span>, <span class="st">'LocationName'</span>, <span class="st">'ItemLocationCode'</span>, </span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'rating_2090_heat_sink'</span>, <span class="st">'rating_2025_current'</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Sort by Location and Family for logical field-checking</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>risk_export <span class="op">=</span> curatorial_risk_list[curatorial_cols].sort_values([<span class="st">'LocationName'</span>, <span class="st">'Family'</span>])</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Export to CSV</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>output_filename <span class="op">=</span> <span class="st">'../outputs/UBCBG_2090_Risk_List_Curators.csv'</span></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>risk_export.to_csv(output_filename, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Exported </span><span class="sc">{</span><span class="bu">len</span>(risk_export)<span class="sc">}</span><span class="ss"> high-risk accessions to </span><span class="sc">{</span>output_filename<span class="sc">}</span><span class="ss">."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Exported 2766 high-risk accessions to ../outputs/UBCBG_2090_Risk_List_Curators.csv.</code></pre>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UBC Botanical Garden Climate Adaptation Analysis – UBCBG: Climate Assessment Tool (CAT) Analysis</title>
+<title>Data Sources &amp; Methodology – UBCBG: Climate Assessment Tool (CAT) Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./methods.html"> 
+    <a class="nav-link active" href="./methods.html" aria-current="page"> 
 <span class="menu-text">Data Sources &amp; Methods</span></a>
   </li>  
   <li class="nav-item">
@@ -128,12 +128,10 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a>
   <ul class="collapse">
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#explore-the-data" id="toc-explore-the-data" class="nav-link" data-scroll-target="#explore-the-data">Explore the Data</a></li>
-  </ul></li>
+  <li><a href="#data-integration-pipeline" id="toc-data-integration-pipeline" class="nav-link active" data-scroll-target="#data-integration-pipeline">1. Data Integration Pipeline</a></li>
+  <li><a href="#climate-assessment-methodology" id="toc-climate-assessment-methodology" class="nav-link" data-scroll-target="#climate-assessment-methodology">2. Climate Assessment Methodology</a></li>
+  <li><a href="#the-climate-suitability-metric" id="toc-the-climate-suitability-metric" class="nav-link" data-scroll-target="#the-climate-suitability-metric">3. The “Climate Suitability” Metric</a></li>
   </ul>
 </nav>
     </div>
@@ -142,8 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UBC Botanical Garden Climate Adaptation Analysis</h1>
-<p class="subtitle lead">Data-driven strategies for the 2050 and 2090 climate scenarios</p>
+<h1 class="title">Data Sources &amp; Methodology</h1>
 </div>
 
 
@@ -160,33 +157,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level1">
-<h1>Project Overview</h1>
-<p>The <strong>Climate Assessment Tool (CAT)</strong> provided by Botanical Gardens Conservation Internation (BGCI) analysis provides a method to assessment of the UBC Botanical Garden’s collection against projected climate shifts. By integrating historical growth records from &gt;3600 institutions from across the world, with localized climate modeling, the BGCI’s CAT tool attempts to describe a plants abilituy to adapt to a theoretical future ‘climate envelope’. This project uses the CAT data provided by the BGCI, along with UBCBG Garden Collection data andf Taxonomic data from World Flora Online to attempt identify risks, opportunities, and strategic priorities for curatorial management.</p>
-<p><a href="./methods.html" class="btn btn-outline-primary"><strong>View Data Sources &amp; Methodology</strong></a></p>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<p>The analysis covers <strong>82.2%</strong> of the documented collection, revealing distinct trends in survivability:</p>
+<section id="data-integration-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="data-integration-pipeline">1. Data Integration Pipeline</h2>
+<p>This analysis synthesizes data from three primary sources to assess the climate resiliency of the living collection.</p>
+<section id="living-collection-data" class="level3">
+<h3 class="anchored" data-anchor-id="living-collection-data">Living Collection Data</h3>
 <ul>
-<li><strong>The 2050 Tipping Point:</strong> While many woody taxa remain resilient through 2050, herbaceous perennials show earlier signs of stress.</li>
-<li><strong>Spatial Vulnerability:</strong> Risk is not evenly distributed. The <strong>Asian Garden</strong> and <strong>Alpine</strong> sections face higher cumulative stress than the Carolinian Forest.</li>
+<li><strong>Source:</strong> UBC Botanical Garden IrisBG Database (Accession Item Report)</li>
+<li><strong>Scope:</strong> All currently living taxa in the Garden Collection, plus historically grown taxa for reference.</li>
+<li><strong>Taxonomy:</strong> Standardized using the World Flora Online (WFO) backbone.</li>
 </ul>
 </section>
-<section id="explore-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="explore-the-data">Explore the Data</h2>
-<div class="grid">
-<section id="trends" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="trends">📊 Trends</h3>
-<p><a href="./notebooks/Joined_EDA.html"><strong>Exploratory Analysis</strong></a> Deep dive into the data coverage, family-level risks, and the “Climate Heroes” of the collection.</p>
+<section id="taxonomic-backbone" class="level3">
+<h3 class="anchored" data-anchor-id="taxonomic-backbone">Taxonomic Backbone</h3>
+<ul>
+<li><strong>Source:</strong> World Flora Online (WFO)</li>
+<li><strong>Scope:</strong> Current accepted taxonomy (as of December 2025) for all extant land plants worldwide, including synonym resolution.</li>
+<li><strong>Note:</strong> Future versions of this pipeline will utilize the WFO’s R package <code>WorldFlora</code> for automated name matching. The current method for deriving taxonomic statistics is detailed on the <a href="./notebooks/data_validation.html">Validation Page</a>.</li>
+</ul>
 </section>
-<section id="maps" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="maps">🗺️ Maps</h3>
-<p><a href="./maps.html"><strong>Interactive Risk Map</strong></a> Explore the garden spatially. Toggle between 2050 and 2090 scenarios to see the “heat sink” effect on specific beds.</p>
+<section id="climate-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="climate-modeling">Climate Modeling</h3>
+<ul>
+<li><strong>Source:</strong> BGCI Climate Assessment Tool (CAT) Version 2.0 (Beta).</li>
+<li><strong>Analyst:</strong> Peter Symes (Royal Botanic Gardens Victoria / BGCI).</li>
+<li><strong>Location:</strong> Point Grey Campus (49.26°N, -123.25°W).</li>
+<li><strong>Scenarios Used:</strong>
+<ul>
+<li><strong>Current / Baseline:</strong> Historical Climate Data (1961-1990).</li>
+<li><strong>2050 Projection:</strong> RCP 4.5 (Emissions Limited Scenario).</li>
+<li><strong>2090 Projection:</strong> RCP 8.5 (Business as Usual Scenario).</li>
+<li><strong>2090 + 1°C:</strong> RCP 8.5 + Urban Heat Island Effect (Simulated).</li>
+</ul></li>
+</ul>
+<hr>
 </section>
-</div>
+</section>
+<section id="climate-assessment-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="climate-assessment-methodology">2. Climate Assessment Methodology</h2>
+<section id="the-cat-tool-version-1-vs.-version-2" class="level3">
+<h3 class="anchored" data-anchor-id="the-cat-tool-version-1-vs.-version-2">The “CAT” Tool: Version 1 vs.&nbsp;Version 2</h3>
+<p>While the <strong>Climate Assessment Tool (CAT)</strong> provided by BGCI is the industry standard for selecting climate-appropriate trees, the public version (V1) yielded insufficient coverage for our diverse collection.</p>
+<ul>
+<li><strong>Version Used:</strong> CAT Version 2.0 (Beta)</li>
+<li><strong>Coverage:</strong> 82.2% of the collection (compared to ~50% with V1)</li>
+</ul>
+<p><strong>Why Version 2?</strong> Initial trials with the public-facing CAT V1 resulted in low taxonomic matching (~50%) and flagged errors in the <em>2090 + Heat Island</em> scenario. We collaborated with BGCI partners to run our dataset through the non-public <strong>CAT V2</strong>, which utilizes an expanded GlobalTreeSearch backbone and refined climate layers.</p>
+</section>
+<section id="data-annealing-infraspecific-taxa" class="level3">
+<h3 class="anchored" data-anchor-id="data-annealing-infraspecific-taxa">Data “Annealing” &amp; Infraspecific Taxa</h3>
+<p>The integration of collection data with climate models followed a multi-stage “Annealing” process to maximize taxonomic coverage. To interface with the CAT algorithms, the collection data was normalized to the <strong>Species</strong> level.</p>
+<ol type="1">
+<li><strong>Normalization:</strong> All infraspecific taxa (subspecies, varieties, cultivars) were rolled up to their parent <code>Genus species</code>.</li>
+<li><strong>Analysis:</strong> The unique list of species was analyzed in CAT V2.</li>
+<li><strong>Re-Annealing:</strong> The resulting climate ratings were mapped back to the original accession list using the species name as the key.</li>
+</ol>
+<p><strong>Limitation Note:</strong> This approach assumes that infraspecific taxa share the climate tolerance of the parent species. Consequently, a specific cultivar (e.g., <em>Acer palmatum</em> ‘Osakazuki’) inherits the broad climate rating of the species (<em>Acer palmatum</em>).</p>
+<hr>
+</section>
+</section>
+<section id="the-climate-suitability-metric" class="level2">
+<h2 class="anchored" data-anchor-id="the-climate-suitability-metric">3. The “Climate Suitability” Metric</h2>
+<p>The analysis utilizes the <strong>Suitability Score (0-11)</strong> generated by CAT V2.</p>
+<blockquote class="blockquote">
+<p><strong>Definition:</strong> The score represents the consensus of climate models predicting suitability for a given taxon. A score of <strong>11</strong> indicates high confidence in suitability (match across all models/parameters), while <strong>0</strong> indicates a total mismatch.</p>
+</blockquote>
+<p><strong>Interpretation:</strong> * <strong>Score 9-11:</strong> <strong>High Suitability (Resilient)</strong> – The taxon is well-adapted to the projected climate conditions. * <strong>Score 5-8:</strong> <strong>Marginal Suitability (Moderate Risk)</strong> – The taxon may experience stress but is likely to survive with intervention. * <strong>Score 0-4:</strong> <strong>Low Suitability (High Risk/Vulnerable)</strong> – The taxon is poorly adapted and faces a high probability of failure without significant microclimate modification.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

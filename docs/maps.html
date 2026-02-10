@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Interactive Risk Maps – UBCBG Climate Analysis</title>
+<title>Interactive Risk Maps – UBCBG: Climate Assessment Tool (CAT) Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">UBCBG Climate Analysis</span>
+    <span class="navbar-title">UBCBG: Climate Assessment Tool (CAT) Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -94,20 +94,24 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./methods.html"> 
+<span class="menu-text">Data Sources &amp; Methods</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./notebooks/2025_taxonomy_backbone_EDA.html"> 
-<span class="menu-text">Taxonomy Backbone</span></a>
+<span class="menu-text">Global Taxonomy Backbone</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./notebooks/data_validation.html"> 
-<span class="menu-text">Data Validation</span></a>
+<span class="menu-text">CAT v1 vs.&nbsp;v2 : Data validation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./notebooks/Joined_EDA.html"> 
-<span class="menu-text">Exploratory Analysis</span></a>
+<span class="menu-text">Exploratory Analysis of the UBC CAT data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./maps.html" aria-current="page"> 
-<span class="menu-text">Suitability Ratings Map</span></a>
+<span class="menu-text">Era based Suitability Ratings Map</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -125,7 +129,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#woody-plants" id="toc-woody-plants" class="nav-link active" data-scroll-target="#woody-plants">🌳 Woody Plants</a></li>
+  <li><a href="#visualization-note" id="toc-visualization-note" class="nav-link active" data-scroll-target="#visualization-note">🗺️ Visualization Note</a></li>
+  <li><a href="#woody-plants" id="toc-woody-plants" class="nav-link" data-scroll-target="#woody-plants">🌳 Woody Plants</a></li>
   <li><a href="#herbaceous-perennials" id="toc-herbaceous-perennials" class="nav-link" data-scroll-target="#herbaceous-perennials">🌿 Herbaceous Perennials</a></li>
   </ul>
 </nav>
@@ -152,7 +157,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Select a climate scenario below to open the interactive map. <em>(Maps open in a new window for best performance)</em></p>
+<section id="visualization-note" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-note">🗺️ Visualization Note</h3>
+<p><strong>Mapping Technique</strong> To accurately visualize the density of the collection on a limited screen: * <strong>Jittering:</strong> We applied a randomized spatial offset of <strong>~6 meters</strong> to mass plantings (e.g., <em>Hosta</em> beds) and shared coordinates. This “explodes” dense clusters to reveal individual plants without distorting their true location. * <strong>Layers:</strong> Points are layered by <strong>LifeForm</strong>, allowing independent assessment of the canopy (Trees) vs.&nbsp;the understory (Perennials).</p>
+<p>Select a climate scenario below to open the interactive map. <em>(Maps open in a new window)</em></p>
+</section>
 <section id="woody-plants" class="level2">
 <h2 class="anchored" data-anchor-id="woody-plants">🌳 Woody Plants</h2>
 <table class="caption-top table">

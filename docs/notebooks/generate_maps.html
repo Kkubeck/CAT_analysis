@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Climate Map Generator – UBCBG Climate Analysis</title>
+<title>Climate Map Generator – UBCBG: Climate Assessment Tool (CAT) Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -115,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">UBCBG Climate Analysis</span>
+    <span class="navbar-title">UBCBG: Climate Assessment Tool (CAT) Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -129,20 +94,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../methods.html"> 
+<span class="menu-text">Data Sources &amp; Methods</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../notebooks/2025_taxonomy_backbone_EDA.html"> 
-<span class="menu-text">Taxonomy Backbone</span></a>
+<span class="menu-text">Global Taxonomy Backbone</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../notebooks/data_validation.html"> 
-<span class="menu-text">Data Validation</span></a>
+<span class="menu-text">CAT v1 vs.&nbsp;v2 : Data validation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../notebooks/Joined_EDA.html"> 
-<span class="menu-text">Exploratory Analysis</span></a>
+<span class="menu-text">Exploratory Analysis of the UBC CAT data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../maps.html"> 
-<span class="menu-text">Suitability Ratings Map</span></a>
+<span class="menu-text">Era based Suitability Ratings Map</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -182,112 +151,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><strong>Output:</strong> Generates 8 interactive HTML maps in the <code>../maps/</code> folder. <strong>Color Coding:</strong> 0 (Red/Risk) to 11 (Green/Safe)</p>
 <div id="b4dee88b-e477-4a8c-be9c-556a3e7d1bd1" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> pio</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. SETUP OUTPUT FOLDER</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">"../maps"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>os.makedirs(output_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>pio.renderers.default <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. LOAD DATA</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/FullJoin3_with_climate_ratings-proofed.csv'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. CLEANING &amp; FORMATTING</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'LocationCoordY_fixed'</span>] <span class="op">=</span> df[[<span class="st">'LocationCoordX'</span>, <span class="st">'LocationCoordY'</span>]].<span class="bu">min</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># Longitude</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'LocationCoordX_fixed'</span>] <span class="op">=</span> df[[<span class="st">'LocationCoordX'</span>, <span class="st">'LocationCoordY'</span>]].<span class="bu">max</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># Latitude</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>exclude_locs <span class="op">=</span> [<span class="st">'Nursery'</span>, <span class="st">'Nitobe Memorial Garden'</span>, <span class="st">'Nitobe'</span>]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'LocationName'</span>].isin(exclude_locs)].copy()</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter outlier coordinates</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> df_clean[df_clean[<span class="st">'LocationCoordY_fixed'</span>] <span class="op">&lt;</span> <span class="op">-</span><span class="fl">123.23</span>].copy() </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply Jitter</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>jitter_strength <span class="op">=</span> <span class="fl">0.00006</span> </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>) </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df_clean[<span class="st">'LocationCoordX_Jittered'</span>] <span class="op">=</span> df_clean[<span class="st">'LocationCoordX_fixed'</span>] <span class="op">+</span> np.random.uniform(<span class="op">-</span>jitter_strength, jitter_strength, size<span class="op">=</span><span class="bu">len</span>(df_clean))</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>df_clean[<span class="st">'LocationCoordY_Jittered'</span>] <span class="op">=</span> df_clean[<span class="st">'LocationCoordY_fixed'</span>] <span class="op">+</span> np.random.uniform(<span class="op">-</span>jitter_strength, jitter_strength, size<span class="op">=</span><span class="bu">len</span>(df_clean))</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming &amp; Melting</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>rename_dict <span class="op">=</span> {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_current_sheet'</span>: <span class="st">'Current'</span>,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_emissions_limited_2050'</span>: <span class="st">'2050'</span>,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_business_as_usual_2090'</span>: <span class="st">'2090'</span>,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'climate_rating_bau_plus_1degree_2090'</span>: <span class="st">'2090_plus_1_degree'</span>,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GenusSpecies'</span>: <span class="st">'Taxon'</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>df_ready <span class="op">=</span> df_clean.rename(columns<span class="op">=</span>rename_dict)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>lifeform_mapping <span class="op">=</span> {</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Shrub'</span>: <span class="st">'Woody'</span>, <span class="st">'Tree'</span>: <span class="st">'Woody'</span>, <span class="st">'Shrub or Tree'</span>: <span class="st">'Woody'</span>,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Climber_Liana_Vine'</span>: <span class="st">'Woody'</span>, <span class="st">'Herbaceous Perennial'</span>: <span class="st">'Perennial'</span>,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bulb, Corm, or Tuber'</span>: <span class="st">'Perennial'</span>, <span class="st">'Annual'</span>: <span class="st">'Short-lived'</span>,</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Biennial'</span>: <span class="st">'Short-lived'</span>, <span class="st">'Habit unknown'</span>: <span class="st">'Unknown'</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>df_ready[<span class="st">'LifeForm'</span>] <span class="op">=</span> df_ready[<span class="st">'LifeForm'</span>].<span class="bu">map</span>(lifeform_mapping).fillna(<span class="st">'Unknown'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>long_format_df <span class="op">=</span> pd.melt(</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    df_ready,</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">'ItemAccNoFull'</span>, <span class="st">'LocationCoordX_Jittered'</span>, <span class="st">'LocationCoordY_Jittered'</span>, <span class="st">'Taxon'</span>, <span class="st">'LifeForm'</span>],</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">'Current'</span>, <span class="st">'2050'</span>, <span class="st">'2090'</span>, <span class="st">'2090_plus_1_degree'</span>],</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">'Era'</span>,</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">'ClimateRating'</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>).dropna(subset<span class="op">=</span>[<span class="st">'ClimateRating'</span>])</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>plot_df <span class="op">=</span> long_format_df[long_format_df[<span class="st">'LifeForm'</span>].isin([<span class="st">'Woody'</span>, <span class="st">'Perennial'</span>])].copy()</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># --- CRITICAL FIX: GEOMETRIC CENTERING ---</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co"># We calculate the center based on the Min/Max of the ENTIRE garden.</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co"># This ensures the "Long" Asian Garden is included, even if fewer plants are there.</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>global_lat <span class="op">=</span> (df_clean[<span class="st">'LocationCoordX_Jittered'</span>].<span class="bu">max</span>() <span class="op">+</span> df_clean[<span class="st">'LocationCoordX_Jittered'</span>].<span class="bu">min</span>()) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>global_lon <span class="op">=</span> (df_clean[<span class="st">'LocationCoordY_Jittered'</span>].<span class="bu">max</span>() <span class="op">+</span> df_clean[<span class="st">'LocationCoordY_Jittered'</span>].<span class="bu">min</span>()) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. GENERATE MAPS LOOP</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>era_labels <span class="op">=</span> {<span class="st">'Current'</span>: <span class="st">'Current Conditions'</span>, <span class="st">'2050'</span>: <span class="st">'2050 (Emissions Limited)'</span>, <span class="st">'2090'</span>: <span class="st">'2090 (BAU)'</span>, <span class="st">'2090_plus_1_degree'</span>: <span class="st">'2090 (+1C)'</span>}</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Generating 8 Map Files (Height=1000px, Geometric Center)..."</span>)</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lifeform <span class="kw">in</span> [<span class="st">'Woody'</span>, <span class="st">'Perennial'</span>]:</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> era <span class="kw">in</span> [<span class="st">'Current'</span>, <span class="st">'2050'</span>, <span class="st">'2090'</span>, <span class="st">'2090_plus_1_degree'</span>]:</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>        subset <span class="op">=</span> plot_df[(plot_df[<span class="st">'LifeForm'</span>] <span class="op">==</span> lifeform) <span class="op">&amp;</span> (plot_df[<span class="st">'Era'</span>] <span class="op">==</span> era)]</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>        fig <span class="op">=</span> go.Figure()</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>        fig.add_trace(go.Scattermapbox(</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>            lat<span class="op">=</span>subset[<span class="st">'LocationCoordX_Jittered'</span>],</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>            lon<span class="op">=</span>subset[<span class="st">'LocationCoordY_Jittered'</span>],</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>            mode<span class="op">=</span><span class="st">'markers'</span>,</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>            marker<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>                size<span class="op">=</span><span class="dv">9</span>,             <span class="co"># Big dots</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span>subset[<span class="st">'ClimateRating'</span>],</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>                colorscale<span class="op">=</span><span class="st">'RdYlGn'</span>,</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>                cmin<span class="op">=</span><span class="dv">0</span>, cmax<span class="op">=</span><span class="dv">11</span>,</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>                opacity<span class="op">=</span><span class="fl">0.9</span>,</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>                showscale<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>                colorbar<span class="op">=</span><span class="bu">dict</span>(title<span class="op">=</span><span class="st">"Suitability"</span>)</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>            ),</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>            text<span class="op">=</span>subset[<span class="st">'Taxon'</span>],</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>            hoverinfo<span class="op">=</span><span class="st">'text'</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>        ))</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>        fig.update_layout(</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>            mapbox<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">"carto-positron"</span>, </span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>                zoom<span class="op">=</span><span class="fl">15.8</span>,</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Use the GLOBAL center so the map doesn't jump</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>                center<span class="op">=</span><span class="bu">dict</span>(lat<span class="op">=</span>global_lat, lon<span class="op">=</span>global_lon)</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>            ),</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>            title_text<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>lifeform<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>era_labels[era]<span class="sc">}</span><span class="ss">"</span>,</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>            height<span class="op">=</span><span class="dv">1000</span>, <span class="co"># &lt;-- Taller map box</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>            margin<span class="op">=</span>{<span class="st">"r"</span>:<span class="dv">0</span>,<span class="st">"t"</span>:<span class="dv">40</span>,<span class="st">"l"</span>:<span class="dv">0</span>,<span class="st">"b"</span>:<span class="dv">0</span>}</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>        filepath <span class="op">=</span> os.path.join(output_dir, <span class="ss">f"</span><span class="sc">{</span>lifeform<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>era<span class="sc">}</span><span class="ss">.html"</span>)</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>        fig.write_html(filepath, include_plotlyjs<span class="op">=</span><span class="st">'cdn'</span>)</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Created: </span><span class="sc">{</span>filepath<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Generating 8 Map Files (Height=1000px, Geometric Center)...
 Created: ../maps/Woody_Current.html
@@ -298,12 +161,6 @@ Created: ../maps/Perennial_Current.html
 Created: ../maps/Perennial_2050.html
 Created: ../maps/Perennial_2090.html
 Created: ../maps/Perennial_2090_plus_1_degree.html</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/jk/2h_df7j95595lz7z2w2kt4kr0000gn/T/ipykernel_49003/2865230530.py:75: DeprecationWarning:
-
-*scattermapbox* is deprecated! Use *scattermap* instead. Learn more at: https://plotly.com/python/mapbox-to-maplibre/
-</code></pre>
 </div>
 </div>
 
